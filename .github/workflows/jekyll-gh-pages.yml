@@ -34,10 +34,10 @@ jobs:
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
-          destination: ./_site
+          destination: ./html/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-
+         path: ./html/index.html
   # Deployment job
   deploy:
     environment:
@@ -49,3 +49,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          path: ./html/index.html
+          
