@@ -18,6 +18,7 @@
             margin: 0;
             position: relative;
             overflow: hidden; /* Hide overflow for rain effect */
+            perspective: 1000px; /* Perspective for 3D effects */
         }
         .overlay {
             position: absolute;
@@ -34,32 +35,34 @@
             text-align: center;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            color: #007BFF; /* Bright blue for modern appeal */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transform: translateZ(0); /* Enable 3D rendering */
             animation: fadeIn 0.5s ease-in-out; /* Fade in animation */
         }
-        p {
+        h1 {
+            font-size: 3em; /* Increased font size */
             margin-bottom: 15px;
-            font-size: 1.1em;
+            color: #007BFF; /* Bright blue for modern appeal */
+            text-shadow: 0 2px 5px rgba(0, 123, 255, 0.5); /* Text shadow for depth */
+        }
+        p, a {
+            margin-bottom: 15px;
+            font-size: 1.2em; /* Increased font size */
             animation: fadeIn 0.5s ease-in-out; /* Fade in animation */
         }
         a {
             color: #007BFF;
             text-decoration: none;
             font-weight: bold;
-            animation: fadeIn 0.5s ease-in-out; /* Fade in animation */
         }
         a:hover {
             text-decoration: underline;
+            transform: translateY(-2px); /* Slight lift effect on hover */
         }
         .spinner {
-            width: 80px; /* Increased size for visibility */
-            height: 80px;
-            border: 10px solid rgba(0, 123, 255, 0.3); /* Light blue */
+            width: 100px; /* Increased size for visibility */
+            height: 100px;
+            border: 12px solid rgba(0, 123, 255, 0.3); /* Light blue */
             border-top-color: #007BFF; /* Blue */
             border-radius: 50%;
             animation: spin 1s linear infinite;
@@ -68,7 +71,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1.5em; /* Adjust font size */
+            font-size: 2em; /* Adjust font size */
             color: #007BFF; /* Spinner text color */
         }
         .date-time {
@@ -101,12 +104,44 @@
             width: 2px;
             height: 20px;
             animation: fall linear infinite;
+            opacity: 0.6; /* Slightly transparent for depth */
+            filter: blur(1px); /* Blur effect for realism */
         }
         @keyframes fall {
             to {
                 transform: translateY(100vh);
             }
         }
+        /* 3D Cube Effect */
+        .cube {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            animation: rotate 10s infinite linear;
+        }
+        @keyframes rotate {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+        .face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 1px solid rgba(0, 123, 255, 0.2);
+            background: rgba(0, 123, 255, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: rgba(0, 123, 255, 0.8);
+        }
+        .front { transform: translateZ(100px); }
+        .back { transform: rotateY(180deg) translateZ(100px); }
+        .right { transform: rotateY(90deg) translateZ(100px); }
+        .left { transform: rotateY(-90deg) translateZ(100px); }
+        .top { transform: rotateX(90deg) translateZ(100px); }
+        .bottom { transform: rotateX(-90deg) translateZ(100px); }
     </style>
 </head>
 <body>
@@ -118,6 +153,14 @@
         <div class="spinner" id="spinner">5</div>
         <div class="date-time" id="dateTime"></div>
         <div class="date-time" id="hijriDate"></div>
+    </div>
+    <div class="cube">
+        <div class="face front">Front</div>
+        <div class="face back">Back</div>
+        <div class="face right">Right</div>
+        <div class="face left">Left</div>
+        <div class="face top">Top</div>
+        <div class="face bottom">Bottom</div>
     </div>
 
     <script>
