@@ -59,6 +59,17 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
             margin-top: 20px; /* Space above the spinner */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            font-size: 1.5em; /* Adjust font size */
+            color: #007BFF; /* Spinner text color */
+        }
+        .date-time {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #555; /* Slightly darker color for date and time */
         }
         @keyframes spin {
             0% { transform: rotate(0deg); }
@@ -72,10 +83,46 @@
 </head>
 <body>
     <div class="overlay">
-        <h1>Redirecting to the Developer Site</h1>
+        <h1>Welcome to the Developer Site</h1>
         <p>Thank you for your interest! You are being redirected to our developer site.</p>
         <p>If you are not redirected within 5 seconds, <a href="html/index.html">click here</a> to proceed.</p>
-        <div class="spinner"></div>
+        <div class="spinner" id="spinner">5</div>
+        <div class="date-time" id="dateTime"></div>
+        <div class="date-time" id="hijriDate"></div>
     </div>
+
+    <script>
+        // Countdown Timer
+        let countdown = 5;
+        const spinner = document.getElementById('spinner');
+
+        const timer = setInterval(() => {
+            countdown--;
+            if (countdown >= 0) {
+                spinner.textContent = countdown; // Update spinner text
+            }
+            if (countdown === 0) {
+                clearInterval(timer); // Stop the countdown
+            }
+        }, 1000); // Update every second
+
+        // Display Current Date and Time
+        function updateDateTime() {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+            document.getElementById('dateTime').textContent = now.toLocaleString('en-US', options);
+        }
+
+        // Fetch and Display Hijri Date
+        function fetchHijriDate() {
+            const hijriOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+            const hijriDate = new Intl.DateTimeFormat('en-US-u-ca-islamic', hijriOptions).format(new Date());
+            document.getElementById('hijriDate').textContent = `Islamic Date: ${hijriDate}`;
+        }
+
+        // Update Date and Time every second
+        setInterval(updateDateTime, 1000);
+        fetchHijriDate(); // Get the Hijri date on load
+    </script>
 </body>
 </html>
