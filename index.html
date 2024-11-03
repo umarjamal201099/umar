@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting to Developer Site</title>
-    <meta http-equiv="refresh" content="3; url=html/index.html">
+    <meta http-equiv="refresh" content="5; url=html/index.html">
     <style>
         body {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #ffffff;
@@ -41,13 +42,27 @@
         a:hover {
             text-decoration: underline;
         }
+        .spinner {
+            margin: 20px auto;
+            width: 60px;
+            height: 60px;
+            border: 8px solid rgba(0, 123, 255, 0.2); /* Light blue */
+            border-left-color: #007BFF; /* Blue */
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Redirecting to the Developer Site</h1>
         <p>Thank you for your interest! You are being redirected to our developer site.</p>
-        <p>If you are not redirected within a few seconds, <a href="html/index.html">click here</a> to proceed.</p>
+        <p>If you are not redirected within 5 seconds, <a href="html/index.html">click here</a> to proceed.</p>
+        <div class="spinner"></div>
     </div>
 </body>
 </html>
