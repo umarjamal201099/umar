@@ -13,12 +13,12 @@
             flex-direction: column;
             height: 100vh;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f4f8; /* Light background for a modern look */
+            background-color: #f0f4f8;
             color: #333;
             margin: 0;
             position: relative;
-            overflow: hidden; /* Hide overflow for rain effect */
-            perspective: 1000px; /* Perspective for 3D effects */
+            overflow: hidden;
+            perspective: 1000px;
         }
         .overlay {
             position: absolute;
@@ -26,8 +26,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent overlay */
-            z-index: 1; /* Ensure overlay is on top */
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 1;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -36,19 +36,19 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            transform: translateZ(0); /* Enable 3D rendering */
-            animation: fadeIn 0.5s ease-in-out; /* Fade in animation */
+            animation: fadeIn 0.5s ease-in-out;
+            max-width: 90%; /* Limit max width for larger screens */
         }
         h1 {
-            font-size: 3em; /* Increased font size */
+            font-size: 2.5em; /* Responsive font size */
             margin-bottom: 15px;
-            color: #007BFF; /* Bright blue for modern appeal */
-            text-shadow: 0 2px 5px rgba(0, 123, 255, 0.5); /* Text shadow for depth */
+            color: #007BFF;
+            text-shadow: 0 2px 5px rgba(0, 123, 255, 0.5);
         }
         p, a {
             margin-bottom: 15px;
-            font-size: 1.2em; /* Increased font size */
-            animation: fadeIn 0.5s ease-in-out; /* Fade in animation */
+            font-size: 1.2em; /* Responsive font size */
+            animation: fadeIn 0.5s ease-in-out;
         }
         a {
             color: #007BFF;
@@ -57,27 +57,24 @@
         }
         a:hover {
             text-decoration: underline;
-            transform: translateY(-2px); /* Slight lift effect on hover */
+            transform: translateY(-2px);
         }
         .spinner {
-            width: 100px; /* Increased size for visibility */
-            height: 100px;
-            border: 12px solid rgba(0, 123, 255, 0.3); /* Light blue */
-            border-top-color: #007BFF; /* Blue */
+            width: 80px; /* Smaller size for responsiveness */
+            height: 80px;
+            border: 10px solid rgba(0, 123, 255, 0.3);
+            border-top-color: #007BFF;
             border-radius: 50%;
             animation: spin 1s linear infinite;
-            margin-top: 20px; /* Space above the spinner */
+            margin-top: 20px;
             position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2em; /* Adjust font size */
-            color: #007BFF; /* Spinner text color */
+            font-size: 1.5em; /* Adjusted font size */
+            color: #007BFF;
         }
         .date-time {
             margin-top: 20px;
-            font-size: 1.2em;
-            color: #555; /* Slightly darker color for date and time */
+            font-size: 1em; /* Responsive font size */
+            color: #555;
         }
         @keyframes spin {
             0% { transform: rotate(0deg); }
@@ -87,14 +84,13 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        /* Rain Animation */
         .rain {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none; /* Allow clicks to go through rain */
+            pointer-events: none;
             overflow: hidden;
         }
         .drop {
@@ -104,44 +100,39 @@
             width: 2px;
             height: 20px;
             animation: fall linear infinite;
-            opacity: 0.6; /* Slightly transparent for depth */
-            filter: blur(1px); /* Blur effect for realism */
+            opacity: 0.6;
+            filter: blur(1px);
         }
         @keyframes fall {
-            to {
-                transform: translateY(100vh);
+            to { transform: translateY(100vh); }
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em; /* Smaller font size for mobile */
+            }
+            .overlay {
+                padding: 10px; /* Less padding on mobile */
+            }
+            p, a {
+                font-size: 1em; /* Smaller text on mobile */
+            }
+            .spinner {
+                width: 60px; /* Adjust spinner size for mobile */
+                height: 60px;
+                font-size: 1em; /* Adjust font size for mobile */
             }
         }
-        /* 3D Cube Effect */
-        .cube {
-            position: relative;
-            width: 200px;
-            height: 200px;
-            transform-style: preserve-3d;
-            animation: rotate 10s infinite linear;
+        
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 1.5em; /* Even smaller font size */
+            }
+            p, a {
+                font-size: 0.9em; /* Smaller text for very small screens */
+            }
         }
-        @keyframes rotate {
-            from { transform: rotateY(0deg); }
-            to { transform: rotateY(360deg); }
-        }
-        .face {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            border: 1px solid rgba(0, 123, 255, 0.2);
-            background: rgba(0, 123, 255, 0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2em;
-            color: rgba(0, 123, 255, 0.8);
-        }
-        .front { transform: translateZ(100px); }
-        .back { transform: rotateY(180deg) translateZ(100px); }
-        .right { transform: rotateY(90deg) translateZ(100px); }
-        .left { transform: rotateY(-90deg) translateZ(100px); }
-        .top { transform: rotateX(90deg) translateZ(100px); }
-        .bottom { transform: rotateX(-90deg) translateZ(100px); }
     </style>
 </head>
 <body>
@@ -153,14 +144,6 @@
         <div class="spinner" id="spinner">5</div>
         <div class="date-time" id="dateTime"></div>
         <div class="date-time" id="hijriDate"></div>
-    </div>
-    <div class="cube">
-        <div class="face front">Front</div>
-        <div class="face back">Back</div>
-        <div class="face right">Right</div>
-        <div class="face left">Left</div>
-        <div class="face top">Top</div>
-        <div class="face bottom">Bottom</div>
     </div>
 
     <script>
@@ -175,8 +158,36 @@
             }
             if (countdown === 0) {
                 clearInterval(timer); // Stop the countdown
+                // Check if the target page is reachable
+                checkTargetPage();
             }
         }, 1000); // Update every second
+
+        function checkTargetPage() {
+            fetch('html/index.html')
+                .then(response => {
+                    if (!response.ok) {
+                        // If response is not OK (404 or other error), show maintenance page
+                        showMaintenancePage();
+                    } else {
+                        // If response is OK, redirect to target
+                        window.location.href = 'html/index.html';
+                    }
+                })
+                .catch(() => {
+                    // If there is an error fetching the page, show maintenance page
+                    showMaintenancePage();
+                });
+        }
+
+        function showMaintenancePage() {
+            document.body.innerHTML = `
+                <div class="overlay">
+                    <h1>Maintenance Work</h1>
+                    <p>We are currently performing some updates. Please check back later.</p>
+                    <p>Thank you for your patience!</p>
+                </div>`;
+        }
 
         // Display Current Date and Time
         function updateDateTime() {
