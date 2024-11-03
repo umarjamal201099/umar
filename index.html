@@ -13,52 +13,65 @@
             flex-direction: column;
             height: 100vh;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ffffff;
+            background-color: #f0f4f8; /* Light background for a modern look */
             color: #333;
             margin: 0;
+            position: relative;
         }
-        .container {
-            text-align: center;
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: #f9f9f9;
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent overlay */
+            z-index: 1; /* Ensure overlay is on top */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
         h1 {
             font-size: 2.5em;
             margin-bottom: 15px;
-            color: #007BFF;
+            color: #007BFF; /* Bright blue for modern appeal */
+            animation: fadeIn 0.5s ease-in-out; /* Fade in animation */
         }
         p {
             margin-bottom: 15px;
             font-size: 1.1em;
+            animation: fadeIn 0.5s ease-in-out; /* Fade in animation */
         }
         a {
             color: #007BFF;
             text-decoration: none;
             font-weight: bold;
+            animation: fadeIn 0.5s ease-in-out; /* Fade in animation */
         }
         a:hover {
             text-decoration: underline;
         }
         .spinner {
-            margin: 20px auto;
-            width: 60px;
-            height: 60px;
-            border: 8px solid rgba(0, 123, 255, 0.3); /* Light blue */
+            width: 80px; /* Increased size for visibility */
+            height: 80px;
+            border: 10px solid rgba(0, 123, 255, 0.3); /* Light blue */
             border-top-color: #007BFF; /* Blue */
             border-radius: 50%;
             animation: spin 1s linear infinite;
+            margin-top: 20px; /* Space above the spinner */
         }
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="overlay">
         <h1>Redirecting to the Developer Site</h1>
         <p>Thank you for your interest! You are being redirected to our developer site.</p>
         <p>If you are not redirected within 5 seconds, <a href="html/index.html">click here</a> to proceed.</p>
