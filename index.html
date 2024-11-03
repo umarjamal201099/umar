@@ -19,6 +19,7 @@
             position: relative;
             overflow: hidden;
             perspective: 1000px;
+            padding: 0 10px; /* Prevent side spacing */
         }
         .overlay {
             position: absolute;
@@ -37,7 +38,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             animation: fadeIn 0.5s ease-in-out;
-            max-width: 90%; /* Limit max width for larger screens */
+            max-width: 100%; /* Adjust to 100% for better responsiveness */
             box-sizing: border-box; /* Ensure padding doesn't affect total width */
         }
         h1 {
