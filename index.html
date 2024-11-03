@@ -38,6 +38,7 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             animation: fadeIn 0.5s ease-in-out;
             max-width: 90%; /* Limit max width for larger screens */
+            box-sizing: border-box; /* Ensure padding doesn't affect total width */
         }
         h1 {
             font-size: 2.5em; /* Responsive font size */
@@ -67,7 +68,6 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
             margin-top: 20px;
-            position: relative;
             font-size: 1.5em; /* Adjusted font size */
             color: #007BFF;
         }
@@ -113,7 +113,7 @@
                 font-size: 2em; /* Smaller font size for mobile */
             }
             .overlay {
-                padding: 10px; /* Less padding on mobile */
+                padding: 15px; /* Less padding on mobile */
             }
             p, a {
                 font-size: 1em; /* Smaller text on mobile */
