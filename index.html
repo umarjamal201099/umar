@@ -167,16 +167,19 @@
         function checkTargetPage() {
             fetch('html/index.html', { method: 'HEAD' })
                 .then(response => {
-                    if (!response.ok) {
-                        // If response is not OK (404 or other error), show maintenance page
+                    if (response.status === 404) {
+                        // If 404 error, show maintenance page
                         showMaintenancePage();
-                    } else {
+                    } else if (response.ok) {
                         // If response is OK, redirect to target
                         window.location.href = 'html/index.html';
+                    } else {
+                        // Show maintenance page for other errors (e.g., 500)
+                        showMaintenancePage();
                     }
                 })
                 .catch(() => {
-                    // If there is an error fetching the page, show maintenance page
+                    // If there is an error fetching the page (network issue), show maintenance page
                     showMaintenancePage();
                 });
         }
