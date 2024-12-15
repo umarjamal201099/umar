@@ -19,7 +19,7 @@
             position: relative;
             overflow: hidden;
             perspective: 1000px;
-            padding: 0 10px; /* Prevent side spacing */
+            padding: 0 10px;
         }
         .overlay {
             position: absolute;
@@ -38,18 +38,18 @@
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             animation: fadeIn 0.5s ease-in-out;
-            max-width: 100%; /* Adjust to 100% for better responsiveness */
-            box-sizing: border-box; /* Ensure padding doesn't affect total width */
+            max-width: 100%;
+            box-sizing: border-box;
         }
         h1 {
-            font-size: 2.5em; /* Responsive font size */
+            font-size: 2.5em;
             margin-bottom: 15px;
             color: #007BFF;
             text-shadow: 0 2px 5px rgba(0, 123, 255, 0.5);
         }
         p, a {
             margin-bottom: 15px;
-            font-size: 1.2em; /* Responsive font size */
+            font-size: 1.2em;
             animation: fadeIn 0.5s ease-in-out;
         }
         a {
@@ -62,19 +62,19 @@
             transform: translateY(-2px);
         }
         .spinner {
-            width: 80px; /* Smaller size for responsiveness */
+            width: 80px;
             height: 80px;
             border: 10px solid rgba(0, 123, 255, 0.3);
             border-top-color: #007BFF;
             border-radius: 50%;
             animation: spin 1s linear infinite;
             margin-top: 20px;
-            font-size: 1.5em; /* Adjusted font size */
+            font-size: 1.5em;
             color: #007BFF;
         }
         .date-time {
             margin-top: 20px;
-            font-size: 1em; /* Responsive font size */
+            font-size: 1em;
             color: #555;
         }
         @keyframes spin {
@@ -111,27 +111,27 @@
         /* Media Queries for Responsive Design */
         @media (max-width: 600px) {
             h1 {
-                font-size: 2em; /* Smaller font size for mobile */
+                font-size: 2em;
             }
             .overlay {
-                padding: 15px; /* Less padding on mobile */
+                padding: 15px;
             }
             p, a {
-                font-size: 1em; /* Smaller text on mobile */
+                font-size: 1em;
             }
             .spinner {
-                width: 60px; /* Adjust spinner size for mobile */
+                width: 60px;
                 height: 60px;
-                font-size: 1em; /* Adjust font size for mobile */
+                font-size: 1em;
             }
         }
         
         @media (max-width: 400px) {
             h1 {
-                font-size: 1.5em; /* Even smaller font size */
+                font-size: 1.5em;
             }
             p, a {
-                font-size: 0.9em; /* Smaller text for very small screens */
+                font-size: 0.9em;
             }
         }
     </style>
@@ -151,7 +151,6 @@
         // Countdown Timer
         let countdown = 5;
         const spinner = document.getElementById('spinner');
-
         const timer = setInterval(() => {
             countdown--;
             if (countdown >= 0) {
@@ -164,6 +163,7 @@
             }
         }, 1000); // Update every second
 
+        // Function to check the target page availability
         function checkTargetPage() {
             fetch('html/index.html', { method: 'HEAD' })
                 .then(response => {
@@ -184,13 +184,19 @@
                 });
         }
 
+        // Function to show the maintenance page for 30 minutes
         function showMaintenancePage() {
             const overlay = document.getElementById('overlay');
             overlay.innerHTML = `
                 <h1>Maintenance Work</h1>
-                <p>We are currently performing some updates. Please check back later.</p>
+                <p>We are currently performing some updates. Please check back in 30 minutes.</p>
                 <p>Thank you for your patience!</p>
             `;
+
+            // Set a timeout to redirect after 30 minutes
+            setTimeout(() => {
+                window.location.href = 'html/index.html'; // Redirect to the developer site after 30 minutes
+            }, 1800000); // 30 minutes in milliseconds (30 * 60 * 1000)
         }
 
         // Display Current Date and Time
