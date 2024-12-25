@@ -461,38 +461,90 @@
   color: #9FA2AB;
 }
 
-.footer-info {
-  max-width: 350px;
-}
-
-.vg-footer .list-unstyled a,
-.vg-footer .list-unstyled li {
-  margin-bottom: 6px;
-  font-size: 21px;
+.vg-footer h1 {
+  font-size: 2.5rem;
   color: #fff;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-.vg-footer .form-control {
-  padding-left: 20px;
-  padding-right: 20px;
+.vg-footer .divider {
+  width: 80px;
+  height: 3px;
+  background: #EF3724;
+  margin: 0 auto 20px;
+  border-radius: 5px;
+}
+
+.vg-footer .list-unstyled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+}
+
+.vg-footer .list-unstyled li {
+  list-style: none;
+}
+
+.vg-footer .list-unstyled a {
+  font-size: 1.5rem;
+  color: #fff;
   background-color: #202334;
+  border-radius: 50%;
+  padding: 12px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.vg-footer .list-unstyled a:hover {
+  background-color: #EF3724;
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.vg-footer p {
+  margin: 20px 0 0;
+  text-align: center;
+  font-size: 14px;
   color: #9FA2AB;
-  border: 0;
-  box-shadow: 0 2px 8px rgba(16, 18, 27, 0.6);
 }
 
-.vg-footer .form-control:focus {
-  box-shadow: 0 2px 8px rgba(16, 18, 27, 0.6);
+.vg-footer p a {
+  color: #EF3724;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.vg-footer form .btn-theme {
-  margin: 0;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  box-shadow: none;
-  border-radius: 0 4px 4px 0;
-  z-index: 9;
+.vg-footer p a:hover {
+  text-decoration: underline;
 }
+
+.vg-footer .ti-heart {
+  color: red;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vg-footer .list-unstyled {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
 
 /* Theme color style */
 /* Theme Red */
