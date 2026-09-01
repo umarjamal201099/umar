@@ -1,0 +1,15 @@
+{
+  "h1": 1,
+  "main": 1,
+  "duplicate_ids": [],
+  "broken_internal_anchors": [],
+  "missing_local_assets": [],
+  "buttons_without_type": 0,
+  "images_without_alt": 0,
+  "booking_ctas_missing_option": [],
+  "css_parse_errors": [],
+  "global_smooth_scroll_present": false,
+  "opacity_reveal_present": false,
+  "webconfig_exists": true,
+  "robots_exists": true
+}
