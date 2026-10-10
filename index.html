@@ -1,235 +1,660 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting to Developer Site</title>
-    <meta http-equiv="refresh" content="5; url=html/index.html">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f4f8;
-            color: #333;
-            margin: 0;
-            position: relative;
-            overflow: hidden;
-            perspective: 1000px;
-            padding: 0 10px;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(255, 255, 255, 0.8);
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 0.5s ease-in-out;
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            color: #007BFF;
-            text-shadow: 0 2px 5px rgba(0, 123, 255, 0.5);
-        }
-        p, a {
-            margin-bottom: 15px;
-            font-size: 1.2em;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-            transform: translateY(-2px);
-        }
-        .spinner {
-            width: 80px;
-            height: 80px;
-            border: 10px solid rgba(0, 123, 255, 0.3);
-            border-top-color: #007BFF;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-top: 20px;
-            font-size: 1.5em;
-            color: #007BFF;
-        }
-        .date-time {
-            margin-top: 20px;
-            font-size: 1em;
-            color: #555;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .rain {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-        }
-        .drop {
-            background: rgba(0, 123, 255, 0.7);
-            position: absolute;
-            bottom: 100%;
-            width: 2px;
-            height: 20px;
-            animation: fall linear infinite;
-            opacity: 0.6;
-            filter: blur(1px);
-        }
-        @keyframes fall {
-            to { transform: translateY(100vh); }
-        }
-
-        /* Media Queries for Responsive Design */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em;
-            }
-            .overlay {
-                padding: 15px;
-            }
-            p, a {
-                font-size: 1em;
-            }
-            .spinner {
-                width: 60px;
-                height: 60px;
-                font-size: 1em;
-            }
-        }
-        
-        @media (max-width: 400px) {
-            h1 {
-                font-size: 1.5em;
-            }
-            p, a {
-                font-size: 0.9em;
-            }
-        }
-    </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="#f5f7f8" name="theme-color"/>
+<meta content="light" name="color-scheme"/>
+<meta content="Software Engineer · Epicor ERP &amp; .NET with 4+ years of experience across C#, SQL Server, Epicor ERP, Xero/CRM integrations, SSO, APIs and production systems." name="description"/>
+<meta content="Umar Jamal | Software Engineer · Epicor ERP &amp; .NET" property="og:title"/>
+<meta content="Software Engineer · Epicor ERP &amp; .NET with 4+ years of experience across C#, SQL Server, Epicor ERP, Xero/CRM integrations, SSO, APIs and production systems." property="og:description"/>
+<meta content="profile" property="og:type"/>
+<meta content="https://umarjamal201099.github.io/umarjamal/" property="og:url"/>
+<meta content="https://umarjamal201099.github.io/umarjamal/assets/img/photo.png" property="og:image"/>
+<meta content="Portrait of Umar Jamal" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Umar Jamal | Software Engineer · Epicor ERP &amp; .NET" name="twitter:title"/>
+<meta content="Software Engineer · Epicor ERP &amp; .NET with 4+ years of experience across C#, SQL Server, Epicor ERP, Xero/CRM integrations, SSO, APIs and production systems." name="twitter:description"/>
+<meta content="https://umarjamal201099.github.io/umarjamal/assets/img/photo.png" name="twitter:image"/>
+<link href="https://umarjamal201099.github.io/umarjamal/" rel="canonical"/>
+<title>Umar Jamal | Software Engineer · Epicor ERP &amp; .NET</title>
+<link href="assets/favicon.png" rel="icon" type="image/png"/>
+<link href="assets/img/photo.webp" rel="preload" as="image" fetchpriority="high"/>
+<link href="assets/css/site.css" rel="stylesheet"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Umar Jamal", "jobTitle": "Software Engineer · Epicor ERP & .NET", "url": "https://umarjamal201099.github.io/umarjamal/", "image": "https://umarjamal201099.github.io/umarjamal/assets/img/photo.png", "email": "mailto:umarjamal201099@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Lahore, Pakistan"}, "sameAs": ["https://www.linkedin.com/in/umar-jamal-rasheed/", "https://github.com/umarjamal201099", "https://umarjamal201099.github.io/umar/"], "alumniOf": "Virtual University of Pakistan", "knowsAbout": [".NET 11 Preview", ".NET 9/10", "ASP.NET Core", "Angular", "Azure DevOps", "BAQs", "BPMs", "Blazor", "C#", "CI/CD", "CSS", "Claude-assisted coding", "Docker", "Entity Framework", "Epicor ERP", "Git", "HTML", "IIS", "JWT", "JavaScript", "Kubernetes", "Microsoft Dynamics", "OAuth 2.0", "OpenAI API", "OpenAPI", "OpenID Connect", "PKCE", "Postman", "RBAC", "REST", "REST integrations", "Razor Pages", "React", "SQL Server", "SSO", "Scalar", "TFS", "VMs", "WCF", "Windows Server", "WooCommerce", "WordPress", "Xero Accounting API", "backup & restore plans", "business logic", "legacy data", "maintenance/jobs", "setup/configuration", "workflow automation"]}</script>
 </head>
 <body>
-    <div class="rain" id="rain"></div>
-    <div class="overlay" id="overlay">
-        <h1>Welcome to the Developer Site</h1>
-        <p>Thank you for your interest! You are being redirected to our developer site.</p>
-        <p>If you are not redirected within 5 seconds, <a href="html/index.html">click here</a> to proceed.</p>
-        <div class="spinner" id="spinner">5</div>
-        <div class="date-time" id="dateTime"></div>
-        <div class="date-time" id="hijriDate"></div>
-    </div>
-
-    <script>
-        // Countdown Timer
-        let countdown = 5;
-        const spinner = document.getElementById('spinner');
-        const timer = setInterval(() => {
-            countdown--;
-            if (countdown >= 0) {
-                spinner.textContent = countdown; // Update spinner text
-            }
-            if (countdown === 0) {
-                clearInterval(timer); // Stop the countdown
-                // Check if the target page is reachable
-                checkTargetPage();
-            }
-        }, 1000); // Update every second
-
-        // Function to check the target page availability
-        function checkTargetPage() {
-            fetch('html/index.html', { method: 'HEAD' })
-                .then(response => {
-                    if (response.status === 404) {
-                        // If 404 error, show maintenance page
-                        showMaintenancePage();
-                    } else if (response.ok) {
-                        // If response is OK, redirect to target
-                        window.location.href = 'html/index.html';
-                    } else {
-                        // Show maintenance page for other errors (e.g., 500)
-                        showMaintenancePage();
-                    }
-                })
-                .catch(() => {
-                    // If there is an error fetching the page (network issue), show maintenance page
-                    showMaintenancePage();
-                });
-        }
-
-        // Function to show the maintenance page for 30 minutes
-        function showMaintenancePage() {
-            const overlay = document.getElementById('overlay');
-            overlay.innerHTML = `
-                <h1>Maintenance Work</h1>
-                <p>We are currently performing some updates. Please check back in 30 minutes.</p>
-                <p>Thank you for your patience!</p>
-            `;
-
-            // Set a timeout to redirect after 30 minutes
-            setTimeout(() => {
-                window.location.href = 'html/index.html'; // Redirect to the developer site after 30 minutes
-            }, 1800000); // 30 minutes in milliseconds (30 * 60 * 1000)
-        }
-
-        // Display Current Date and Time
-        function updateDateTime() {
-            const now = new Date();
-            const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
-            document.getElementById('dateTime').textContent = now.toLocaleString('en-US', options);
-        }
-
-        // Fetch and Display Hijri Date
-        function fetchHijriDate() {
-            const hijriOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-            const hijriDate = new Intl.DateTimeFormat('en-US-u-ca-islamic', hijriOptions).format(new Date());
-            document.getElementById('hijriDate').textContent = `Islamic Date: ${hijriDate}`;
-        }
-
-        // Create Rain Effect
-        function createRain() {
-            const rainContainer = document.getElementById('rain');
-            for (let i = 0; i < 100; i++) {
-                const drop = document.createElement('div');
-                drop.className = 'drop';
-                drop.style.left = Math.random() * 100 + 'vw';
-                drop.style.animationDuration = Math.random() * 1 + 0.5 + 's';
-                drop.style.animationDelay = Math.random() * 2 + 's';
-                rainContainer.appendChild(drop);
-            }
-        }
-
-        // Update Date and Time every second
-        setInterval(updateDateTime, 1000);
-        fetchHijriDate(); // Get the Hijri date on load
-        createRain(); // Start rain effect
-    </script>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" data-header="">
+<div class="wrap nav-shell">
+<a aria-label="Umar Jamal home" class="wordmark" href="#top">
+<strong>Umar Jamal</strong>
+<span>Software Engineer · Epicor ERP &amp; .NET</span>
+</a>
+<button aria-controls="main-nav" aria-expanded="false" class="nav-toggle" data-nav-toggle="" type="button">
+<span>Menu</span><i aria-hidden="true"></i>
+</button>
+<nav aria-label="Primary navigation" class="main-nav" data-nav="" id="main-nav">
+<a data-nav-link="" href="#erp-architecture"><span>System map</span><small>ERP architecture</small></a>
+<a data-nav-link="" href="#work"><span>Work</span><small>Selected systems</small></a>
+<a data-nav-link="" href="#experience"><span>Experience</span><small>Professional history</small></a>
+<a data-nav-link="" href="#capabilities"><span>Expertise</span><small>Stack &amp; ownership</small></a>
+<a data-nav-link="" href="#advisory"><span>Advisory</span><small>Technical sessions</small></a>
+<a data-nav-link="" href="#contact"><span>Contact</span><small>Direct channels</small></a>
+<a class="nav-cv" download="" href="assets/Umar-Jamal-CV.pdf"><span>CV</span><small>PDF download</small></a>
+<button class="nav-book" data-book-service="Free 15-minute fit check" type="button">Book free call <span aria-hidden="true">↗</span></button>
+</nav>
+</div>
+<div aria-hidden="true" class="site-progress"><i data-scroll-progress=""></i></div>
+</header>
+<main id="main">
+<section class="hero" id="top">
+<div class="wrap hero-grid">
+<div class="hero-copy">
+<p class="overline">4+ years · Epicor ERP · C# / .NET · SQL Server · Enterprise Integrations</p>
+<p class="hero-role">Software Engineer · Epicor ERP Developer · Enterprise Systems Engineer</p>
+<h1>Engineering the systems businesses run on.</h1>
+<p class="hero-intro">Software Engineer with 4+ years of experience across Epicor ERP, C#/.NET, SQL Server and enterprise integrations. I connect business workflows, APIs, identity and data into production systems that are easier to operate and extend.</p>
+<div class="hero-actions">
+<a class="primary-link" href="#work">See selected systems <span aria-hidden="true">↘</span></a>
+<button class="secondary-button" data-book-service="Free 15-minute fit check" type="button">Book a free 15-min call <span aria-hidden="true">↗</span></button>
+<a class="quiet-link" download="" href="assets/Umar-Jamal-CV.pdf">Download CV ↓</a>
+</div>
+<div aria-label="Professional summary" class="hero-facts">
+<div><span>Experience</span><strong>4+ years · enterprise software &amp; Epicor ERP</strong></div>
+<div><span>Core focus</span><strong>ERP · backend · integrations · CRM · data</strong></div>
+<div><span>Primary stack</span><strong>Epicor ERP · C# · .NET · SQL Server</strong></div>
+</div>
+</div>
+<aside aria-label="Profile" class="hero-aside">
+<figure class="portrait">
+<img alt="Portrait of Umar Jamal" fetchpriority="high" height="750" src="assets/img/photo.webp" width="750"/>
+</figure>
+<div class="portrait-caption">
+<span>Epicor ERP + .NET</span>
+<p>Enterprise systems · integrations · backend engineering</p>
+</div>
+<button class="availability" data-book-service="Free 15-minute fit check" type="button">
+<span aria-hidden="true" class="availability-dot"></span>
+            Free 15-minute discovery call available
+            <span aria-hidden="true">↗</span>
+</button>
+</aside>
+</div>
+</section>
+<section aria-label="Professional specialization" class="current-strip">
+<div class="wrap current-grid">
+<div><span>01 / Experience</span><strong>4+ years</strong><p>Enterprise software &amp; Epicor ERP delivery</p></div>
+<div><span>02 / Specialization</span><strong>Epicor ERP</strong><p>Customization, BPMs, BAQs, workflows &amp; REST integrations</p></div>
+<div><span>03 / Engineering stack</span><strong>C# · .NET 10 · SQL Server</strong><p>APIs, Xero, Scalar/OpenAPI, identity &amp; production delivery</p></div>
+</div>
+</section>
+<section class="section erp-specialization" id="erp-architecture">
+<div class="wrap">
+<div class="erp-heading">
+<div>
+<p class="overline">Epicor ERP Engineering</p>
+<h2>A live system map—not an infographic.</h2>
+</div>
+<div class="erp-heading-copy">
+<p>I treat Epicor as the operational core of a wider enterprise platform: CRM and customer activity enter on one side; secure .NET services, APIs, identity and external applications connect on the other; SQL and reporting sit underneath the flow.</p>
+<div aria-label="Epicor ERP capabilities" class="erp-tags">
+<span>BPMs</span><span>BAQs</span><span>Business logic</span><span>REST APIs</span><span>Workflow automation</span><span>SQL Server</span><span>CRM integration</span><span>Production support</span>
+</div>
+</div>
+</div>
+<div class="architecture-workbench">
+<div class="system-screen" data-tilt-screen="">
+<div class="screen-chrome">
+<div aria-hidden="true" class="screen-dots"><i></i><i></i><i></i></div>
+<div class="screen-address"><span class="screen-lock">◆</span> enterprise.system-map / epicor</div>
+<span class="screen-live"><i></i> Live system explorer</span>
+</div>
+<div class="screen-toolbar">
+<div>
+<span class="screen-eyebrow">Enterprise architecture</span>
+<strong>ERP integration topology</strong>
+</div>
+<div aria-label="Architecture view" class="architecture-modes" role="group">
+<button aria-pressed="true" class="is-active" data-architecture-mode="executive" type="button">Business</button>
+<button aria-pressed="false" data-architecture-mode="technical" type="button">Technical</button>
+<button aria-pressed="false" data-architecture-mode="security" type="button">Security</button>
+</div>
+</div>
+<div aria-label="Enterprise system flow" class="architecture-path">
+<span data-path-step="business">Customer / CRM</span><i aria-hidden="true">→</i>
+<span data-path-step="core">Epicor ERP</span><i aria-hidden="true">→</i>
+<span data-path-step="services">.NET / APIs</span><i aria-hidden="true">→</i>
+<span data-path-step="access">Identity / Apps</span><i aria-hidden="true">→</i>
+<span data-path-step="data">SQL / Reporting</span>
+</div>
+<div aria-label="Interactive system map" class="mobile-system-explorer" data-mobile-system-explorer="">
+<div class="mobile-explorer-intro">
+<div><span data-mobile-mode-label="">Business flow</span><strong data-mobile-mode-title="">From customer demand to ERP operations</strong></div>
+<p data-mobile-mode-copy="">Tap a layer once to see what it owns, why it exists and how it connects to the next system.</p>
+</div>
+<div aria-label="System layers" class="mobile-layer-tabs" role="tablist">
+<button data-mobile-arch-key="customer" role="tab" type="button">Customer</button>
+<button data-mobile-arch-key="crm" role="tab" type="button">CRM</button>
+<button aria-selected="true" data-mobile-arch-key="erp" role="tab" type="button">Epicor ERP</button>
+<button data-mobile-arch-key="integration" role="tab" type="button">.NET</button>
+<button data-mobile-arch-key="api" role="tab" type="button">REST API</button>
+<button data-mobile-arch-key="identity" role="tab" type="button">Identity</button>
+<button data-mobile-arch-key="external" role="tab" type="button">Apps</button>
+<button data-mobile-arch-key="data" role="tab" type="button">SQL</button>
+</div>
+<article aria-live="polite" class="mobile-layer-card">
+<div class="mobile-layer-top"><span data-mobile-arch-index="">03</span><em data-mobile-arch-category="">Operational core</em></div>
+<h3 data-mobile-arch-title="">Epicor ERP</h3>
+<p data-mobile-arch-copy="">Epicor owns operational rules, transactional workflows and enterprise data.</p>
+<dl class="mobile-layer-facts">
+<div><dt>Focus</dt><dd data-mobile-arch-focus="">Operational continuity</dd></div>
+<div><dt>Method</dt><dd data-mobile-arch-method="">ERP-owned rules</dd></div>
+<div><dt>Result</dt><dd data-mobile-arch-outcome="">Stable system of record</dd></div>
+</dl>
+<div class="mobile-layer-actions">
+<button data-mobile-arch-next="" type="button">Next layer <span aria-hidden="true">→</span></button>
+<button data-book-service="Free 15-minute fit check" type="button">Discuss this system <span aria-hidden="true">↗</span></button>
+</div>
+</article>
+</div>
+<div class="architecture-network" data-architecture-network="" data-mode="executive">
+<div class="network-label label-in">Business input</div>
+<div class="network-label label-core">Operational core</div>
+<div class="network-label label-edge">Connected services</div>
+<div class="network-stack network-inbound">
+<button class="network-node" data-arch-key="customer" data-copy="Customer activity, opportunities and requests enter through controlled business workflows before becoming ERP transactions." data-title="Customer &amp; Sales" type="button"><span>01</span><strong>Customer</strong><small>Demand &amp; activity</small></button>
+<div aria-hidden="true" class="vertical-connector"><i></i></div>
+<button class="network-node" data-arch-key="crm" data-copy="CRM and internal applications manage customer context while ERP remains the operational source for orders, inventory, finance and fulfilment." data-title="CRM &amp; Business Applications" type="button"><span>02</span><strong>CRM</strong><small>Sales &amp; relationship data</small></button>
+</div>
+<div aria-hidden="true" class="horizontal-connector connector-left"><i></i><b>validated business flow</b></div>
+<button class="erp-core-node is-active" data-arch-key="erp" data-copy="Epicor is the operational core: business rules, transactional workflows and enterprise data across sales, inventory, procurement, manufacturing, finance and operations." data-title="Epicor ERP" type="button">
+<div class="core-head"><span>03 / Core system</span><strong>Epicor ERP</strong><small>Operational source of truth</small></div>
+<div class="core-modules"><span>Sales</span><span>Inventory</span><span>Procurement</span><span>Manufacturing</span><span>Finance</span><span>Operations</span></div>
+</button>
+<div aria-hidden="true" class="horizontal-connector connector-right"><i></i><b>secure integration boundary</b></div>
+<div class="network-stack network-services">
+<button class="network-node node-technical" data-arch-key="integration" data-copy="C# and .NET services contain integration logic, validation and synchronization so external systems do not depend directly on ERP internals." data-title="C# / .NET Integration Layer" type="button"><span>04</span><strong>C# / .NET</strong><small>Integration services</small></button>
+<button class="network-node node-security" data-arch-key="api" data-copy="Versioned REST APIs create clean system boundaries for ERP, CRM, SaaS and external applications." data-title="REST API Layer" type="button"><span>05</span><strong>REST APIs</strong><small>System boundary</small></button>
+<button class="network-node node-security" data-arch-key="identity" data-copy="SSO, OAuth/OIDC, JWT, roles and permissions control who can access connected applications and data." data-title="Identity &amp; SSO" type="button"><span>06</span><strong>Identity / SSO</strong><small>Access &amp; permissions</small></button>
+<button class="network-node" data-arch-key="external" data-copy="Xero, CRM, commerce, SaaS and third-party applications connect through explicit contracts rather than tight ERP coupling." data-title="External / Finance Applications" type="button"><span>07</span><strong>External Apps</strong><small>Xero · CRM · SaaS</small></button>
+</div>
+<div class="data-foundation">
+<button data-arch-key="data" data-copy="SQL Server supports operational data, reporting, analysis, legacy data processing and controlled integration flows." data-title="SQL Server &amp; Enterprise Data" type="button"><span>08 / Data foundation</span><strong>SQL Server</strong><small>Transactions · reporting · integration data · backup-aware operations</small></button>
+</div>
+</div>
+<div class="screen-statusbar">
+<span class="status-ready"><i></i> Production-minded architecture</span>
+<div aria-label="Architecture color legend" class="map-legend">
+<span class="legend-business">Business</span>
+<span class="legend-core">ERP core</span>
+<span class="legend-service">Services</span>
+<span class="legend-security">Security</span>
+<span class="legend-data">Data</span>
+</div>
+</div>
+</div>
+<aside aria-live="polite" class="architecture-brief">
+<div class="brief-topline"><span>Selected layer</span><strong data-arch-index="">03</strong></div>
+<h3 data-arch-title="">Epicor ERP</h3>
+<p data-arch-copy="">Epicor is the operational core: business rules, transactional workflows and enterprise data across sales, inventory, procurement, manufacturing, finance and operations.</p>
+<div class="brief-divider"></div>
+<span class="brief-label">How I explain it to a client</span>
+<blockquote data-arch-pitch="">Keep ERP responsible for operations, then connect everything else through controlled services and APIs.</blockquote>
+<dl class="brief-facts">
+<div><dt>Focus</dt><dd data-arch-focus="">Operational continuity</dd></div>
+<div><dt>Method</dt><dd data-arch-method="">ERP-owned rules</dd></div>
+<div><dt>Outcome</dt><dd data-arch-outcome="">Stable system of record</dd></div>
+</dl>
+<div aria-label="Architecture reference links" class="architecture-resources">
+<span>Useful references</span>
+<div>
+<a aria-haspopup="dialog" aria-label="Preview Xero Accounting API inside portfolio; open in new tab is also available" data-preview-description="Preview the public Xero Accounts API explorer inside the portfolio. Use Open new tab for the full developer experience." data-preview-kicker="Technical reference" data-preview-mode="overview" data-preview-title="Xero Accounting API" data-site-preview="" href="https://api-explorer.xero.com/accounting/accounts/getaccounts" rel="noopener noreferrer" target="_blank"><strong>Xero Accounting API</strong><small>Open Accounts explorer ↗</small></a>
+<a aria-haspopup="dialog" aria-label="Preview Scalar ASP.NET API Reference inside portfolio; open in new tab is also available" data-preview-description="Preview the public Scalar ASP.NET Core integration reference without leaving the portfolio." data-preview-kicker="Technical reference" data-preview-mode="overview" data-preview-title="Scalar ASP.NET API Reference" data-site-preview="" href="https://scalar.com/products/api-references/integrations/aspnetcore/integration" rel="noopener noreferrer" target="_blank"><strong>Scalar API Docs</strong><small>Open ASP.NET integration ↗</small></a>
+</div>
+</div>
+<button class="brief-cta" data-book-service="Free 15-minute fit check" type="button">Discuss your architecture <span>↗</span></button>
+</aside>
+</div>
+</div>
+</section>
+<section class="section selected-work" id="work">
+<div class="wrap">
+<div class="section-head">
+<div>
+<p class="overline">Selected work</p>
+<h2>Systems, not mockups.</h2>
+</div>
+<p>Recent platform, product and enterprise work presented around the engineering responsibility—not invented metrics or template filler.</p>
+</div>
+<article class="feature-case feature-case-live">
+<div class="feature-media">
+<div aria-labelledby="centaiva-demo-title" class="product-window">
+<div class="product-window-bar">
+<div aria-hidden="true" class="product-window-dots"><i></i><i></i><i></i></div>
+<span>centaiva.platform / control-plane</span>
+<a href="#erp-architecture">Open ERP system map ↗</a>
+</div>
+<div class="product-ui" data-product-demo="">
+<aside aria-label="Centaiva architecture layers" class="product-sidebar">
+<div class="product-sidebar-brand">
+<strong id="centaiva-demo-title">CENTAIVA</strong>
+<small>Interactive architecture</small>
+</div>
+<div aria-label="Explore Centaiva platform layers" class="product-tabs" role="tablist">
+<button aria-controls="centaiva-panel" aria-selected="true" class="active" data-product-tab="platform" id="centaiva-tab-platform" role="tab" type="button">Platform</button>
+<button aria-controls="centaiva-panel" aria-selected="false" data-product-tab="identity" id="centaiva-tab-identity" role="tab" tabindex="-1" type="button">Identity</button>
+<button aria-controls="centaiva-panel" aria-selected="false" data-product-tab="tenancy" id="centaiva-tab-tenancy" role="tab" tabindex="-1" type="button">Tenancy</button>
+<button aria-controls="centaiva-panel" aria-selected="false" data-product-tab="entitlements" id="centaiva-tab-entitlements" role="tab" tabindex="-1" type="button">Entitlements</button>
+<button aria-controls="centaiva-panel" aria-selected="false" data-product-tab="integrations" id="centaiva-tab-integrations" role="tab" tabindex="-1" type="button">Integrations</button>
+<button aria-controls="centaiva-panel" aria-selected="false" data-product-tab="applications" id="centaiva-tab-applications" role="tab" tabindex="-1" type="button">Applications</button>
+<button aria-controls="centaiva-panel" aria-selected="false" data-product-tab="data" id="centaiva-tab-data" role="tab" tabindex="-1" type="button">Data</button>
+</div>
+</aside>
+<div aria-labelledby="centaiva-tab-platform" class="product-main" id="centaiva-panel" role="tabpanel" tabindex="0">
+<div class="product-main-head">
+<div><span data-product-kicker="">Architecture / overview</span><h4 data-product-title="">Platform control plane</h4></div>
+<em><i></i><span data-product-status="">Live system model</span></em>
+</div>
+<div class="product-context"><span>Click a layer to explore</span><strong data-product-summary="">One control plane keeps identity, tenancy, access, products, integrations and data boundaries understandable.</strong></div>
+<div class="product-kpis">
+<button aria-pressed="false" data-product-kpi="0" type="button"><span>Identity</span><strong>OIDC / OAuth 2.0</strong></button>
+<button aria-pressed="false" data-product-kpi="1" type="button"><span>Tenancy</span><strong>Scoped hierarchy</strong></button>
+<button aria-pressed="false" data-product-kpi="2" type="button"><span>Access</span><strong>Roles + permissions</strong></button>
+</div>
+<div aria-label="Selected platform flow" class="product-flow" data-product-flow="">
+<div><span>Platform</span><strong>Control</strong></div><i>→</i><div><span>Identity</span><strong>SSO</strong></div><i>→</i><div><span>Tenant</span><strong>Context</strong></div><i>→</i><div><span>Apps</span><strong>Access</strong></div>
+</div>
+<div class="product-lower">
+<button aria-pressed="false" data-product-lower="0" type="button"><span>Commercial layer</span><p>Products · plans · subscriptions · entitlements</p></button>
+<button aria-pressed="false" data-product-lower="1" type="button"><span>Integration layer</span><p>OAuth clients · API keys · webhooks · external services</p></button>
+<button aria-pressed="false" data-product-lower="2" type="button"><span>Data &amp; deployment</span><p>Shared/dedicated data · routing · audit · backups</p></button>
+</div>
+<div aria-live="polite" class="product-selection"><span>Selected detail</span><strong data-product-selection="">Choose any architecture card to inspect it without leaving the page.</strong></div>
+</div>
+</div>
+</div>
+<p class="feature-media-note"><span>Live web presentation</span> Click through the internal layers to inspect how identity, tenancy, entitlements, integrations, applications and data fit together.</p>
+</div>
+<div class="feature-copy">
+<div class="case-meta"><span>01 / Platform architecture</span><span>Centaiva</span></div>
+<h3>Centaiva SaaS Foundation</h3>
+<p class="case-lead">A multi-layer SaaS platform that separates identity, tenancy, authorization, commercial entitlements, integrations, applications and deployment concerns so the system remains understandable as it grows.</p>
+<dl class="case-spec">
+<div><dt>Identity</dt><dd>OIDC · OAuth 2.0 · PKCE · JWT · MFA / passkeys</dd></div>
+<div><dt>Access</dt><dd>Tenant roles · permissions · delegated access · least privilege</dd></div>
+<div><dt>Commercial</dt><dd>Products · plans · subscriptions · entitlements · usage limits</dd></div>
+<div><dt>Operations</dt><dd>Shared/dedicated data · regional routing · audit · backups</dd></div>
+</dl>
+<div class="case-actions"><a class="plain-link" href="#erp-architecture">View ERP system map →</a><button data-book-service="Free 15-minute fit check" type="button">Discuss a similar system ↗</button></div>
+</div>
+</article>
+<div class="work-list">
+<article class="work-row work-row-current">
+<div class="work-index">02</div>
+<div class="work-title"><p>UK-facing accounting integration</p><h3>Xero Accounting API</h3></div>
+<div class="work-description"><p>Xero accounting integration through an authenticated .NET service boundary, including Accounts / chart-of-accounts retrieval for finance-facing business workflows.</p><span>Xero Accounting API · OAuth 2.0 · C#/.NET · GET Accounts · integration services</span></div>
+<a aria-haspopup="dialog" aria-label="Preview Xero Accounting API inside portfolio; open in new tab is also available" data-preview-description="Preview the public Xero Accounts API explorer inside the portfolio. Use Open new tab for the full developer experience." data-preview-kicker="Technical reference" data-preview-mode="overview" data-preview-title="Xero Accounting API" data-site-preview="" href="https://api-explorer.xero.com/accounting/accounts/getaccounts" rel="noopener noreferrer" target="_blank" class="work-link">API ↗</a>
+</article>
+<article class="work-row">
+<div class="work-index">03</div>
+<div class="work-title"><p>AI-enabled banking</p><h3>BankMind AI</h3></div>
+<div class="work-description"><p>Contributed to an AI-driven banking product, including backend performance work for large datasets and a React + ASP.NET Core application experience.</p><span>ASP.NET Core · React · AI product · large datasets</span></div>
+<a aria-haspopup="dialog" aria-label="Preview BankMind AI inside portfolio; open in new tab is also available" data-preview-description="Preview the public BankMind AI website inside the portfolio. You can also open the live site in a new tab at any time." data-preview-kicker="Live product website" data-preview-mode="overview" data-preview-title="BankMind AI" data-site-preview="" href="https://www.bankmind.ai/" rel="noopener noreferrer" target="_blank" class="work-link work-preview-link">Preview</a>
+</article>
+<article class="work-row">
+<div class="work-index">04</div>
+<div class="work-title"><p>Enterprise real estate</p><h3>Bahria Town Design Wing</h3></div>
+<div class="work-description"><p>.NET 9 backend work across SSO, plot workflows, legacy data, SQL services, modular architecture, ownership/reporting and VM deployment.</p><span>.NET 9 · SSO · SQL Server · Clean Architecture · VM</span></div>
+<a aria-haspopup="dialog" aria-label="Preview Bahria Town Design Wing inside portfolio; open in new tab is also available" data-preview-description="Preview the public Bahria Town website as context for the enterprise real-estate systems work described in this portfolio." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="Bahria Town Design Wing" data-site-preview="" href="https://bahriatown.com/bahria-town-lahore/" rel="noopener noreferrer" target="_blank" class="work-link">Org ↗</a>
+</article>
+<article class="work-row">
+<div class="work-index">05</div>
+<div class="work-title"><p>Cloud / infrastructure</p><h3>Eclipse Cloud Migration</h3></div>
+<div class="work-description"><p>Cloud-migration work spanning application readiness, database/server setup, environment configuration and production transition support.</p><span>Cloud migration · server setup · database setup · deployment</span></div>
+<span class="work-private">Private work</span>
+</article>
+<article class="work-row">
+<div class="work-index">06</div>
+<div class="work-title"><p>Application delivery</p><h3>Eventime</h3></div>
+<div class="work-description"><p>Application delivery across backend services, API integration, database/environment setup and production deployment support.</p><span>.NET · APIs · SQL · environments · deployment</span></div>
+<span class="work-private">Private work</span>
+</article>
+</div>
+</div>
+</section>
+<section class="section experience" id="experience">
+<div class="wrap experience-layout">
+<div class="experience-intro">
+<p class="overline">Experience</p>
+<h2>4+ years across Epicor ERP, backend platforms and enterprise operations.</h2>
+<p>Hands-on professional experience from Epicor customization and business workflows through C#/.NET services, SQL, CRM integrations, identity and production environments.</p>
+<a class="plain-link" download="" href="assets/Umar-Jamal-CV.pdf">Download full CV ↓</a>
+</div>
+<div class="role-list">
+<article class="role">
+<header><div><h3>ERP Developer (Epicor)</h3><p>Kairós Solutions · Remote · Australia</p></div><time>Nov 2024 — Present</time></header>
+<p>Epicor backend customization, third-party integration, WordPress automation, WooCommerce catalog/authentication/order workflows and cross-business-unit ERP integration.</p>
+</article>
+<article class="role">
+<header><div><h3>Software Developer</h3><p>Bahria Town · Lahore</p></div><time>Jun 2024 — Present</time></header>
+<p>.NET 9 backend systems, centralized SSO, third-party integration, plot merging, security workflows, large legacy-data processing, SQL services, modular architecture and virtual-machine deployment.</p>
+</article>
+<article class="role">
+<header><div><h3>Software Developer</h3><p>Dukanlay Solutions · Lahore</p></div><time>Apr 2023 — Nov 2024</time></header>
+<p>Scalable ASP.NET Core, Entity Framework and SQL Server applications, responsive Razor Pages and React + ASP.NET Core interfaces delivered with cross-functional teams.</p>
+</article>
+<article class="role">
+<header><div><h3>Freelance Developer</h3><p>Online projects · Remote</p></div><time>Mid-2022 — Mar 2023</time></header>
+<p>Web applications and small software solutions using .NET, C#, Angular and SQL.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="section capabilities" id="capabilities">
+<div class="wrap">
+<div class="section-head capabilities-head">
+<div><p class="overline">Capabilities</p><h2>Where I can take ownership.</h2></div>
+<p>A practical engineering stack based on the work in my CV—not skill percentages.</p>
+</div>
+<div class="capability-table" role="list">
+<div class="capability-row" role="listitem"><span>01</span><h3>Backend &amp; APIs</h3><p>C# · ASP.NET Core · .NET 9/10 · .NET 11 Preview · REST · OpenAPI · Scalar · WCF</p><strong>Application logic, typed services, modern API surfaces</strong></div>
+<div class="capability-row capability-primary" role="listitem"><span>02</span><h3>Epicor ERP engineering</h3><p>Epicor ERP · BPMs · BAQs · business logic · REST integrations · workflow automation</p><strong>Primary specialization · ERP customization &amp; connected business systems</strong></div>
+<div class="capability-row" role="listitem"><span>03</span><h3>SQL Server &amp; data operations</h3><p>SQL Server · setup/configuration · backup &amp; restore plans · maintenance/jobs · Entity Framework · legacy data</p><strong>Data services, migration support, recovery-minded operations</strong></div>
+<div class="capability-row" role="listitem"><span>04</span><h3>Identity &amp; security</h3><p>SSO · OAuth 2.0 · OpenID Connect · PKCE · JWT · RBAC</p><strong>Authentication, tenant-aware authorization</strong></div>
+<div class="capability-row" role="listitem"><span>05</span><h3>Infrastructure &amp; delivery</h3><p>Windows Server · IIS · VMs · Docker · Kubernetes · CI/CD · Azure DevOps · Git · TFS</p><strong>Environment setup, deployment, database operations, production support</strong></div>
+<div class="capability-row" role="listitem"><span>06</span><h3>Frontend &amp; product interfaces</h3><p>React · Angular · JavaScript · HTML · CSS · Razor Pages · Blazor</p><strong>Responsive interfaces connected to enterprise backend systems</strong></div>
+<div class="capability-row" role="listitem"><span>07</span><h3>Integrations &amp; tooling</h3><p>Xero Accounting API · WooCommerce · WordPress · Microsoft Dynamics · OpenAI API · Claude-assisted coding · Postman</p><strong>Finance and commerce integrations, AI-enabled workflows</strong></div>
+</div>
+</div>
+</section>
+<section class="section platform-track" id="current-stack">
+<div class="wrap">
+<div class="platform-track-head">
+<div>
+<p class="overline overline-light">Current engineering track · Sep 2026</p>
+<h2>Modern stack, with production boundaries kept clear.</h2>
+</div>
+<p>I use stable platform releases for production work, keep preview technology explicitly separated, and document external integrations so clients can see where data enters, how it is validated and what owns it next.</p>
+</div>
+<div class="platform-track-grid">
+<article class="track-card track-card-xero">
+<div class="track-card-top"><span>01 / Finance integration</span><em>UK-facing</em></div>
+<h3>Xero Accounting API</h3>
+<p>Accounting integration through OAuth 2.0 and a controlled .NET service boundary. The current portfolio example focuses on <strong>GET Accounts</strong> / chart-of-accounts retrieval rather than claiming a generic “Xero expert” badge.</p>
+<div aria-label="Xero integration flow" class="track-flow"><span>Xero</span><i>→</i><span>.NET service</span><i>→</i><span>business workflow</span></div>
+<div class="track-tags"><span>OAuth 2.0</span><span>GET /Accounts</span><span>C# / .NET</span><span>Finance data</span></div>
+<a aria-haspopup="dialog" aria-label="Preview Xero Accounting API inside portfolio; open in new tab is also available" class="track-link external-link" data-preview-description="Preview the public Xero Accounts API explorer inside the portfolio. Use Open new tab for the full developer experience." data-preview-kicker="Technical reference" data-preview-mode="overview" data-preview-title="Xero Accounting API" data-site-preview="" href="https://api-explorer.xero.com/accounting/accounts/getaccounts" rel="noopener noreferrer" target="_blank">Open Xero API explorer ↗</a>
+</article>
+<article class="track-card">
+<div class="track-card-top"><span>02 / .NET platform</span><em>Current track</em></div>
+<h3>.NET 10 LTS + .NET 11 Preview</h3>
+<p>Production-oriented work can target the supported .NET 10 LTS line, while .NET 11 preview features stay in evaluation until they are appropriate for a real deployment.</p>
+<div class="runtime-lines">
+<div><span>.NET 10</span><strong>LTS · current stable line</strong></div>
+<div><span>.NET 11</span><strong>Preview 7 · evaluation only</strong></div>
+</div>
+<div class="track-tags"><span>ASP.NET Core</span><span>OpenAPI</span><span>Scalar.AspNetCore</span><span>EF Core</span></div>
+<a aria-haspopup="dialog" aria-label="Preview Scalar ASP.NET API Reference inside portfolio; open in new tab is also available" class="track-link external-link" data-preview-description="Preview the public Scalar ASP.NET Core integration reference without leaving the portfolio." data-preview-kicker="Technical reference" data-preview-mode="overview" data-preview-title="Scalar ASP.NET API Reference" data-site-preview="" href="https://scalar.com/products/api-references/integrations/aspnetcore/integration" rel="noopener noreferrer" target="_blank">Scalar API reference ↗</a>
+</article>
+<article class="track-card">
+<div class="track-card-top"><span>03 / Data operations</span><em>Production support</em></div>
+<h3>SQL Server setup &amp; recovery planning</h3>
+<p>Database work includes environment setup, configuration, scheduled backup plans and restore-minded operating procedures—not only writing application queries.</p>
+<div class="ops-list">
+<span>Instance / environment setup</span><span>Full · differential · log backup planning</span><span>Restore checks &amp; recovery readiness</span><span>Maintenance jobs &amp; deployment support</span>
+</div>
+</article>
+<article class="track-card">
+<div class="track-card-top"><span>04 / AI-assisted engineering</span><em>Applied tooling</em></div>
+<h3>OpenAI + Claude-assisted workflows</h3>
+<p>OpenAI API integration where the product needs it, plus Claude/coding-agent workflows for prototyping, refactoring and implementation acceleration. Production changes still go through normal review, testing and security checks.</p>
+<div class="track-tags"><span>OpenAI API</span><span>Claude</span><span>Coding agents</span><span>Human review</span></div>
+<div class="track-note"><span>Positioning</span><strong>AI-assisted engineering, not an “AI template” portfolio.</strong></div>
+</article>
+</div>
+</div>
+</section>
+<section aria-labelledby="client-work-title" class="section client-work">
+<div class="wrap">
+<div class="client-heading">
+<p class="overline">Additional project work</p>
+<h2 id="client-work-title">ERP, CRM, finance, commerce, manufacturing and operations.</h2>
+</div>
+<div class="client-list" data-link-list="">
+<a aria-haspopup="dialog" aria-label="Preview Galvin Engineering inside portfolio; open in new tab is also available" data-preview-description="Preview the public Galvin Engineering website as context for the backend optimization and product UI work." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="Galvin Engineering" data-site-preview="" href="https://www.galvinengineering.com.au/" rel="noopener noreferrer" target="_blank"><span>Galvin · Australia</span><strong>Backend optimization &amp; product UI</strong><span aria-hidden="true" class="client-tail"></span></a>
+<a aria-haspopup="dialog" aria-label="Preview Caterlink inside portfolio; open in new tab is also available" data-preview-description="Preview the public Caterlink website as context for the WooCommerce and order-automation work." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="Caterlink" data-site-preview="" href="https://www.caterlink.com.au/" rel="noopener noreferrer" target="_blank"><span>Caterlink · Australia</span><strong>WooCommerce &amp; order automation</strong><span aria-hidden="true" class="client-tail"></span></a>
+<a aria-haspopup="dialog" aria-label="Preview C &amp; W Services inside portfolio; open in new tab is also available" data-preview-description="Preview the public C &amp; W Services website as context for the internal workflow application work." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="C &amp; W Services" data-site-preview="" href="https://cwservices.com/" rel="noopener noreferrer" target="_blank"><span>C &amp; W Services</span><strong>Internal workflow applications</strong><span aria-hidden="true" class="client-tail"></span></a>
+<a aria-haspopup="dialog" aria-label="Preview United Fasteners inside portfolio; open in new tab is also available" data-preview-description="Preview the public United Fasteners website as context for the e-commerce integration and product-automation work." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="United Fasteners" data-site-preview="" href="https://www.unitedfasteners.com.au/" rel="noopener noreferrer" target="_blank"><span>United Fasteners · Australia</span><strong>E-commerce integration &amp; product automation</strong><span aria-hidden="true" class="client-tail"></span></a>
+<a aria-haspopup="dialog" aria-label="Preview MIT Semiconductor inside portfolio; open in new tab is also available" data-preview-description="Preview the public MIT Semiconductor website as context for the ERP customization and systems-integration work." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="MIT Semiconductor" data-site-preview="" href="https://www.mit.com.sg/" rel="noopener noreferrer" target="_blank"><span>MIT Semiconductor · Singapore</span><strong>ERP customization &amp; systems integration</strong><span aria-hidden="true" class="client-tail"></span></a>
+<a aria-haspopup="dialog" aria-label="Preview Orbital UAV inside portfolio; open in new tab is also available" data-preview-description="Preview the public Orbital UAV website as context for the backend and materials-planning systems work." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="Orbital UAV" data-site-preview="" href="https://www.orbitaluav.com/" rel="noopener noreferrer" target="_blank"><span>Orbital UAV · Australia</span><strong>Backend &amp; materials-planning systems</strong><span aria-hidden="true" class="client-tail"></span></a>
+<div class="client-static"><span>CRM Project</span><strong>Lead management, communication &amp; analytics dashboards</strong><em class="client-status">Private case</em></div>
+<a class="client-internal-link" href="#experience"><span>Epicor ERP Delivery</span><strong>Backend, integrations, commerce &amp; automation</strong><em class="client-action-link">Experience <b aria-hidden="true">→</b></em></a>
+</div>
+</div>
+</section>
+<section class="section client-outcomes" id="solutions">
+<div class="wrap">
+<div class="section-head outcome-heading">
+<div><p class="overline">Client conversation</p><h2>Start with the business problem. I’ll map the technical path.</h2></div>
+<p>I translate ERP, backend and integration problems into a system plan a technical team and a business stakeholder can both understand.</p>
+</div>
+<div class="outcome-list">
+<article><span>01 / ERP integration</span><h3>“Our ERP is isolated.”</h3><p>Connect Epicor with CRM, commerce, SaaS or external services without turning the ERP into a fragile point-to-point hub.</p><strong>Outcome → controlled integration flow</strong></article>
+<article><span>02 / Identity</span><h3>“Every app has separate access logic.”</h3><p>Design SSO, roles and tenant-aware authorization so users move across business applications with consistent security boundaries.</p><strong>Outcome → one understandable access model</strong></article>
+<article><span>03 / Backend &amp; data</span><h3>“The system works, but it is hard to change.”</h3><p>Review .NET, SQL, API and deployment boundaries to reduce coupling and make production changes safer to reason about.</p><strong>Outcome → clearer path to modernization</strong></article>
+</div>
+</div>
+</section>
+<section aria-labelledby="approach-title" class="section delivery-flow" id="approach">
+<div class="wrap">
+<div class="section-head delivery-flow-heading">
+<div><p class="overline">How I work</p><h2 id="approach-title">From business problem to production system.</h2></div>
+<p>A client should be able to see what happens next. I reduce ambiguity first, then make the system boundary, implementation path and production checks explicit.</p>
+</div>
+<div class="delivery-steps" data-flow-steps="">
+<article><span>01</span><div><strong>Discover</strong><p>Clarify the business workflow, pain point, users, constraints and what success needs to look like.</p></div></article>
+<article><span>02</span><div><strong>Map</strong><p>Identify the system of record, data ownership, integration boundary, identity model and operational risks.</p></div></article>
+<article><span>03</span><div><strong>Build</strong><p>Implement the Epicor, .NET, API, SQL or integration change behind clear contracts and controlled responsibilities.</p></div></article>
+<article><span>04</span><div><strong>Prove &amp; operate</strong><p>Test the critical flow, validate deployment, restore/rollback readiness and leave the next owner with an understandable system.</p></div></article>
+</div>
+<p class="delivery-flow-note">Business requirement <i>→</i> system boundary <i>→</i> implementation <i>→</i> production confidence</p>
+</div>
+</section>
+<section class="advisory" id="advisory">
+<div class="wrap advisory-header">
+<div class="advisory-copy">
+<p class="overline overline-light">Technical advisory</p>
+<h2>Get clarity before you spend weeks building the wrong thing.</h2>
+<p>Use a focused session for Epicor/ERP integration, Xero/accounting APIs, modern .NET architecture, SSO, SQL Server setup/backup planning, API documentation or a production issue. The goal is a decision and next steps—not a sales deck.</p>
+<div class="advisory-trust"><span>Remote worldwide</span><span>Meet / Teams / Zoom</span><span>Free discovery</span><span>Paid deep-dives</span></div>
+</div>
+<div class="advisory-free-card">
+<span class="free-label">Start here</span>
+<strong>Free 15-minute discovery call</strong>
+<p>Quickly check fit, scope and the best next step. No payment and no obligation.</p>
+<button data-book-service="Free 15-minute fit check" type="button">Schedule free call <span>↗</span></button>
+<a href="https://wa.me/923006917248?text=Hi%20Umar%2C%20I%27d%20like%20to%20schedule%20a%20free%2015-minute%20discovery%20call." rel="noopener noreferrer" target="_blank">Or connect on WhatsApp →</a>
+</div>
+</div>
+<div aria-label="How a technical advisory engagement works" class="wrap engagement-flow">
+<article><span>01</span><div><strong>Choose the conversation</strong><p>Start free for fit and scope, or choose a focused paid technical session.</p></div></article>
+<article><span>02</span><div><strong>Pick a time</strong><p>Use the live scheduler when connected, or send a booking request from the portfolio.</p></div></article>
+<article><span>03</span><div><strong>Leave with a next move</strong><p>We finish with a clear recommendation, risks and practical implementation steps.</p></div></article>
+</div>
+<div aria-label="Technical advisory options" class="wrap advisory-services">
+<article class="service-card">
+<div class="service-number">01</div>
+<span class="service-type">Technical direction</span>
+<h3>30 min</h3>
+<p>One focused architecture, API, SQL, deployment or debugging question.</p>
+<ul><li>Problem framing</li><li>Recommended direction</li><li>Immediate next steps</li></ul>
+<div class="service-footer"><strong>$35</strong><button data-book-service="30-minute Technical Direction — $35" type="button">Book session ↗</button></div>
+</article>
+<article class="service-card featured-service">
+<div class="service-number">02</div>
+<span class="service-type">ERP / architecture working session</span>
+<h3>60 min</h3>
+<p>For Epicor/Xero integration, SSO, system boundaries, .NET modernization, migration or implementation decisions.</p>
+<ul><li>Architecture walkthrough</li><li>Risk &amp; dependency review</li><li>Concrete implementation path</li></ul>
+<div class="service-footer"><strong>$65</strong><button data-book-service="60-minute Architecture / ERP Advisory — $65" type="button">Book session ↗</button></div>
+</article>
+<article class="service-card">
+<div class="service-number">03</div>
+<span class="service-type">Deep-dive review</span>
+<h3>90 min</h3>
+<p>Pre-read material plus a detailed review for complex architecture, migration or production systems.</p>
+<ul><li>Pre-read context</li><li>Detailed technical review</li><li>Written summary available</li></ul>
+<div class="service-footer"><strong>$95</strong><button data-book-service="90-minute Deep-Dive Review — $95" type="button">Book session ↗</button></div>
+</article>
+</div>
+<div class="wrap advisory-footnote">USD pricing · free call requires no payment · paid sessions can use a connected booking/payment provider or be confirmed manually · processor fees may apply.</div>
+</section>
+<section class="section booking-cta" id="booking">
+<div class="wrap booking-cta-grid">
+<div><p class="overline">Schedule a call</p><h2>Show me the system. I’ll help you find the next move.</h2></div>
+<div class="booking-cta-copy">
+<p>For a quick fit check, start with the free 15-minute call. For a technical problem, choose a paid session and send the context before we meet.</p>
+<div class="booking-cta-actions"><button class="primary-link button-reset" data-book-service="Free 15-minute fit check" type="button">Schedule free call ↗</button><a class="plain-link" href="https://wa.me/923006917248?text=Hi%20Umar%2C%20I%27d%20like%20to%20discuss%20an%20ERP%20or%20software%20project." rel="noopener noreferrer" target="_blank">WhatsApp →</a><a class="quiet-link" href="mailto:umarjamal201099@gmail.com?subject=ERP%20or%20Software%20Project">Email project details</a></div>
+</div>
+</div>
+</section>
+<section class="section contact" id="contact">
+<div class="wrap contact-grid">
+<div class="contact-heading">
+<p class="overline">Contact</p>
+<h2>Have a difficult ERP, integration or backend system to build?</h2>
+</div>
+<div class="contact-list" data-link-list="">
+<a href="mailto:umarjamal201099@gmail.com"><span>Email</span><strong>umarjamal201099@gmail.com</strong><i>↗</i></a>
+<a href="tel:+923006917248"><span>Phone</span><strong>+92 300 6917248</strong><i>↗</i></a>
+<a href="https://www.linkedin.com/in/umar-jamal-rasheed/" rel="noopener noreferrer" target="_blank"><span>LinkedIn</span><strong>umar-jamal-rasheed</strong><i>↗</i></a>
+<a href="https://github.com/umarjamal201099" rel="noopener noreferrer" target="_blank"><span>GitHub</span><strong>umarjamal201099</strong><i>↗</i></a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap footer-grid">
+<div><strong>Umar Jamal</strong><span>Software Engineer · Epicor ERP &amp; .NET · 4+ years</span></div>
+<p>© <span data-year=""></span> Umar Jamal. Built around real engineering work. <span class="build-tag">Build 2026-10-11</span></p>
+<div><a href="#top">Back to top ↑</a><a download="" href="assets/Umar-Jamal-CV.pdf">CV ↓</a></div>
+</div>
+</footer>
+<dialog aria-labelledby="site-preview-title" class="site-preview-dialog" id="site-preview-dialog">
+<div class="site-preview-shell">
+<header class="site-preview-head">
+<div class="site-preview-heading">
+<span data-site-preview-kicker="">Website preview</span>
+<h2 data-site-preview-title="" id="site-preview-title">Website preview</h2>
+<p data-site-preview-description="">Review the project context here, then open the live website when you want the full experience.</p>
+</div>
+<div class="site-preview-actions">
+<button aria-label="Refresh preview" class="site-preview-action" data-site-preview-reload="" type="button">Refresh</button>
+<a class="site-preview-action site-preview-open" data-site-preview-open="" href="#" rel="noopener noreferrer" target="_blank">Open live site <span aria-hidden="true">↗</span></a>
+<button aria-label="Close website preview" class="site-preview-close" data-site-preview-close="" type="button">Close <span aria-hidden="true">×</span></button>
+</div>
+</header>
+<div class="site-preview-browser" data-site-preview-browser="">
+<div aria-hidden="true" class="site-preview-chrome">
+<div class="site-preview-dots"><i></i><i></i><i></i></div>
+<div class="site-preview-address"><span>◆</span><strong data-site-preview-domain="">website</strong></div>
+<div class="site-preview-status"><i></i> Portfolio preview</div>
+</div>
+<div class="site-preview-stage">
+<div class="site-preview-overview" data-site-preview-overview="">
+<div class="site-preview-overview-main">
+<span class="site-preview-overline" data-site-preview-overline="">PUBLIC WEBSITE</span>
+<h3 data-site-preview-card-title="">Website</h3>
+<p data-site-preview-card-description="">Project context will appear here.</p>
+<div class="site-preview-context" data-site-preview-context=""></div>
+<div class="site-preview-tags" data-site-preview-tags=""></div>
+</div>
+<aside class="site-preview-overview-side">
+<div class="site-preview-domain-card">
+<span>LIVE DESTINATION</span>
+<strong data-site-preview-domain-card="">website.com</strong>
+<p>The external site controls whether browsers allow iframe embedding. This portfolio preview never shows a broken frame.</p>
+<a data-site-preview-open-secondary="" href="#" rel="noopener noreferrer" target="_blank">Open live website <span aria-hidden="true">↗</span></a>
+</div>
+<div aria-hidden="true" class="site-preview-signal">
+<span>PORTFOLIO</span><i></i><span>CONTEXT</span><i></i><span>LIVE SITE</span>
+</div>
+</aside>
+</div>
+<div class="site-preview-loading" data-site-preview-loading="" hidden="">
+<span aria-hidden="true" class="site-preview-spinner"></span>
+<strong>Loading live website…</strong>
+<small>If the website allows embedding, it will appear here.</small>
+</div>
+<iframe allow="fullscreen" class="site-preview-frame" data-site-preview-frame="" hidden="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="about:blank" title="Live website preview"></iframe>
+</div>
+</div>
+<footer class="site-preview-foot">
+<div><span>Portfolio preview</span><strong>Project context stays inside the portfolio.</strong></div>
+<p>The live website opens in a new tab because many external sites block secure iframe embedding.</p>
+</footer>
+</div>
+</dialog>
+<dialog aria-labelledby="booking-dialog-title" class="booking-dialog" id="booking-dialog">
+<div class="booking-dialog-shell">
+<div class="booking-dialog-head">
+<div><span>Schedule a conversation</span><h2 id="booking-dialog-title">Tell me what you’re trying to solve.</h2></div>
+<button aria-label="Close booking form" class="booking-dialog-close" data-close-booking="" type="button">Close ×</button>
+</div>
+<div class="booking-dialog-grid">
+<aside class="booking-dialog-aside">
+<div class="booking-dialog-note"><span>Free discovery</span><strong>15 min · $0</strong><p>Best when you want to check fit, scope and whether I can help.</p></div>
+<div class="booking-dialog-note"><span>Paid advisory</span><strong>30 / 60 / 90 min</strong><p>Best when you already have a technical problem, architecture decision or production blocker.</p></div>
+<div class="booking-connect"><span>Prefer direct contact?</span><a href="https://wa.me/923006917248?text=Hi%20Umar%2C%20I%27d%20like%20to%20schedule%20a%20call." rel="noopener noreferrer" target="_blank">WhatsApp ↗</a><a href="mailto:umarjamal201099@gmail.com?subject=Schedule%20a%20call">Email ↗</a></div>
+</aside>
+<form action="https://formspree.io/f/mzzbdgjb" class="booking-form" id="booking-form" method="POST">
+<div aria-label="Choose a session" class="booking-quick-start">
+<div class="booking-quick-head"><span>Choose a session</span><strong>One click, then add your context.</strong></div>
+<div aria-label="Session options" class="booking-quick-grid" role="group">
+<button class="is-active" data-booking-choice="Free 15-minute fit check" type="button"><span>Discovery</span><strong>15 min</strong><em>Free</em></button>
+<button data-booking-choice="30-minute Technical Direction — $35" type="button"><span>Direction</span><strong>30 min</strong><em>$35</em></button>
+<button data-booking-choice="60-minute Architecture / ERP Advisory — $65" type="button"><span>Architecture</span><strong>60 min</strong><em>$65</em></button>
+<button data-booking-choice="90-minute Deep-Dive Review — $95" type="button"><span>Deep dive</span><strong>90 min</strong><em>$95</em></button>
+</div>
+</div>
+<div class="booking-live-option" data-live-booking="" hidden="">
+<div><span>Live availability</span><strong data-live-booking-label="">Book this session instantly</strong><p data-live-booking-note="">Select a live time slot. Paid sessions can collect payment inside the connected scheduling provider.</p></div>
+<a class="booking-live-link" data-live-booking-link="" href="#" rel="noopener noreferrer" target="_blank">Open live calendar ↗</a>
+</div>
+<input name="FormType" type="hidden" value="Technical advisory booking request"/>
+<div class="field-pair">
+<label><span>Name</span><input autocomplete="name" name="Name" placeholder="Your name" required="" type="text"/></label>
+<label><span>Work email</span><input autocomplete="email" name="Email" placeholder="you@company.com" required="" type="email"/></label>
+</div>
+<label class="booking-service-field"><span>Session</span>
+<select id="booking-service" name="Service" required="">
+<option value="">Select a call</option>
+<option>Free 15-minute fit check</option>
+<option>30-minute Technical Direction — $35</option>
+<option>60-minute Architecture / ERP Advisory — $65</option>
+<option>90-minute Deep-Dive Review — $95</option>
+</select>
+</label>
+<div class="field-pair">
+<label><span>Preferred date &amp; time</span><input name="PreferredDateTime" required="" type="datetime-local"/></label>
+<label><span>Your timezone</span><input name="Timezone" placeholder="e.g. GMT+1 / London" required="" type="text"/></label>
+</div>
+<label><span>What do you want to solve?</span><textarea name="Problem" placeholder="Epicor/Xero integration, SSO, .NET architecture, SQL Server backup/recovery, OpenAI/Claude integration, deployment or another system problem..." required="" rows="5"></textarea></label>
+<button class="submit-button" type="submit"><span>Request this slot</span><span aria-hidden="true">↗</span></button>
+<p class="booking-privacy">This request form does not collect payment. If a live scheduler is connected, paid booking/payment happens securely with that provider.</p>
+<p aria-live="polite" class="form-status" id="booking-status" role="status"></p>
+</form>
+</div>
+</div>
+</dialog>
+<noscript>
+<div class="noscript-contact">JavaScript is disabled. You can still <a href="mailto:umarjamal201099@gmail.com?subject=ERP%20or%20Software%20Project">email project details</a> or <a href="https://wa.me/923006917248?text=Hi%20Umar%2C%20I%27d%20like%20to%20discuss%20an%20ERP%20or%20software%20project." rel="noopener noreferrer" target="_blank">contact me on WhatsApp</a>.</div>
+</noscript>
+<script defer="" src="assets/js/booking-config.js"></script>
+<script defer="" src="assets/js/modern.js"></script>
+<script defer="" src="assets/js/v17-ui.js"></script>
+<script defer="" src="assets/js/v20-preview.js"></script>
 </body>
 </html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://umarjamal201099.github.io/umarjamal/sitemap.xml
