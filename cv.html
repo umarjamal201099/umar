@@ -7,10 +7,10 @@
 <meta name="robots" content="noindex"/>
 <style>
   :root { --ink:#16202a; --muted:#56616c; --rule:#d9dee3; --accent:#0f5f73; }
-  @page { size: A4; margin: 14mm 15mm 14mm 15mm; }
+  @page { size: A4; margin: 12mm 14mm 12mm 14mm; }
   * { box-sizing: border-box; }
   html { background:#fff; }
-  body { margin:0 auto; max-width:180mm; padding:16px; color:var(--ink); font:10pt/1.42 "Segoe UI", "Helvetica Neue", Arial, sans-serif; background:#fff; }
+  body { margin:0 auto; max-width:180mm; padding:16px; color:var(--ink); font:9.8pt/1.38 "Segoe UI", "Helvetica Neue", Arial, sans-serif; background:#fff; }
   @media print { body { padding:0; max-width:none; } }
   a { color:var(--accent); text-decoration:none; }
   header { display:flex; gap:16px; align-items:center; padding-bottom:10px; border-bottom:2px solid var(--accent); }
@@ -19,19 +19,20 @@
   .title { margin:2px 0 6px; font-size:11.5pt; color:var(--accent); font-weight:600; }
   .contact { margin:0; color:var(--muted); font-size:9pt; }
   .contact span + span::before { content:" · "; color:var(--rule); }
-  h2 { margin:14px 0 6px; font-size:10.5pt; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); border-bottom:1px solid var(--rule); padding-bottom:2px; }
+  h2 { margin:12px 0 5px; font-size:10.5pt; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); border-bottom:1px solid var(--rule); padding-bottom:2px; }
   p { margin:0 0 6px; }
-  .job { margin:0 0 9px; break-inside:avoid; }
+  .job { margin:0 0 7px; break-inside:avoid; }
   .job-head { display:flex; justify-content:space-between; gap:12px; align-items:baseline; }
   .job-head strong { font-size:10.5pt; }
   .job-head time { color:var(--muted); font-size:9pt; white-space:nowrap; }
   .where { color:var(--muted); font-size:9.3pt; margin:0 0 3px; }
   ul { margin:2px 0 0; padding-left:16px; }
-  li { margin:0 0 2px; }
+  li { margin:0 0 1px; }
   .skills { display:grid; grid-template-columns: 44mm 1fr; gap:3px 10px; }
   .skills dt { font-weight:600; }
   .skills dd { margin:0; }
   .projects li strong { font-weight:600; }
+  .tech { margin:3px 0 0; color:var(--accent); font-size:8.8pt; }
   .clients { color:var(--muted); font-size:9.3pt; }
   .edu { display:flex; justify-content:space-between; gap:12px; margin:0 0 3px; }
   .edu span { color:var(--muted); white-space:nowrap; }
@@ -51,12 +52,12 @@
 <p>Software Engineer with 4+ years of experience building and integrating business systems with C#, ASP.NET Core, SQL Server and Epicor ERP. I customize Epicor (BPMs, BAQs, business logic), build .NET services and REST APIs, implement SSO/OAuth 2.0, and integrate ERP with commerce, CRM and accounting platforms such as WooCommerce and Xero. Experienced working remotely with international teams on projects for clients in Australia, Singapore and Pakistan across banking, manufacturing, e-commerce and real estate.</p>
 
 <h2>Experience</h2>
-<div class="job"><div class="job-head"><strong>Founder &amp; Software Architect</strong><time>Current</time></div><p class="where">Centaiva · Remote</p><ul><li>Designed a multi-layer SaaS platform separating identity, tenancy, authorization, entitlements, integrations and data/deployment concerns</li><li>Implemented OIDC / OAuth 2.0 with PKCE, JWT and MFA/passkeys, with tenant-scoped roles, permissions and delegated access</li><li>Modelled products, plans, subscriptions, entitlements and usage limits as a commercial layer separate from application code</li></ul></div>
-<div class="job"><div class="job-head"><strong>Software Developer</strong><time>Current</time></div><p class="where">GMP · Lahore</p><ul><li>Develop GMP&#x27;s CRM and operations platform with Angular 16 and a layered ASP.NET Core Web API (data-access, common and model layers) on Entity Framework Core and SQL Server</li><li>Build modules for sales, billing, invoicing, operations, reports, dashboards, users and roles, and global search, including radius-based location search</li><li>Implement ASP.NET Core Identity with JWT authentication, real-time updates with SignalR and SMS notifications through the ClickSend API</li><li>Add Google Gemini AI features, Excel exports and chart dashboards, shipped through separate local, QA and production environments</li></ul></div>
-<div class="job"><div class="job-head"><strong>ERP Developer (Epicor)</strong><time>Nov 2024 — Present</time></div><p class="where">Kairós Solutions · Remote · Australia</p><ul><li>Customize and extend Epicor ERP backends (BPMs, BAQs, business logic) for manufacturing, distribution and food-service clients in Australia and Singapore</li><li>Integrate Epicor with third-party systems through REST APIs to automate workflows across multiple business units</li><li>Build WooCommerce integrations for product catalogues, customer authentication and order processing, kept in sync with ERP data</li><li>Automate WordPress content and operations scripts to remove manual admin work</li></ul></div>
-<div class="job"><div class="job-head"><strong>Software Developer</strong><time>Jun 2024 — Present</time></div><p class="where">Bahria Town · Lahore</p><ul><li>Build .NET 9 backend systems for a large-scale real-estate platform using Clean Architecture</li><li>Implemented Single Sign-On for secure, centralized authentication across system modules</li><li>Developed plot merging, data filtering and cyclic security workflows, plus modular services for plot management, ownership tracking and reporting</li><li>Processed large volumes of legacy data for the Design Wing and built SQL-based services; deploy to virtual machines</li><li>Integrated third-party tools (e.g. Print Save Track) with international teams</li></ul></div>
-<div class="job"><div class="job-head"><strong>Software Developer</strong><time>Apr 2023 — Nov 2024</time></div><p class="where">Dukanlay Solutions · Lahore</p><ul><li>Led development and maintenance of ASP.NET Core web applications with Entity Framework and SQL Server</li><li>Built responsive Razor Pages and React front ends that improved platform usability</li><li>Designed data-access layers with the Repository and Unit of Work patterns and dependency injection</li><li>Delivered with a cross-functional Agile team, from requirements to release; contributed to BankMind AI</li></ul></div>
-<div class="job"><div class="job-head"><strong>Freelance Developer</strong><time>Mid-2022 — Mar 2023</time></div><p class="where">Online projects · Remote</p><ul><li>Built web applications and small software solutions with .NET, C#, Angular and SQL for remote clients</li></ul></div>
+<div class="job"><div class="job-head"><strong>Founder &amp; Software Architect</strong><time>Current</time></div><p class="where">Centaiva · Remote</p><ul><li>Designed a multi-layer SaaS platform separating identity, tenancy, authorization, entitlements, integrations and data/deployment concerns</li><li>Implemented OIDC / OAuth 2.0 with PKCE, JWT and MFA/passkeys, with tenant-scoped roles, permissions and delegated access</li><li>Modelled products, plans, subscriptions, entitlements and usage limits as a commercial layer separate from application code</li></ul><p class="tech">ASP.NET Core · OIDC · OAuth 2.0 · Multi-tenancy · SQL Server</p></div>
+<div class="job"><div class="job-head"><strong>Software Developer</strong><time>Current</time></div><p class="where">GMP · Lahore</p><ul><li>Develop GMP&#x27;s CRM and operations platform with Angular 16 and a layered ASP.NET Core Web API (data-access, common and model layers) on Entity Framework Core and SQL Server</li><li>Build modules for sales, billing, invoicing, operations, reports, dashboards, users and roles, and global search, including radius-based location search</li><li>Implement ASP.NET Core Identity with JWT authentication, real-time updates with SignalR and SMS notifications through the ClickSend API</li><li>Add Google Gemini AI features, Excel exports and chart dashboards, shipped through separate local, QA and production environments</li></ul><p class="tech">Angular · ASP.NET Core · Entity Framework Core · SQL Server · SignalR · JWT</p></div>
+<div class="job"><div class="job-head"><strong>ERP Developer (Epicor)</strong><time>Nov 2024 — Present</time></div><p class="where">Kairós Solutions · Remote · Australia</p><ul><li>Customize and extend Epicor ERP backends (BPMs, BAQs, business logic) for manufacturing, distribution and food-service clients in Australia and Singapore</li><li>Integrate Epicor with third-party systems through REST APIs to automate workflows across multiple business units</li><li>Build WooCommerce integrations for product catalogues, customer authentication and order processing, kept in sync with ERP data</li><li>Automate WordPress content and operations scripts to remove manual admin work</li></ul><p class="tech">Epicor ERP · C# · SQL Server · REST APIs · WooCommerce · WordPress</p></div>
+<div class="job"><div class="job-head"><strong>Software Developer</strong><time>Jun 2024 — Present</time></div><p class="where">Bahria Town · Lahore</p><ul><li>Build .NET 9 backend systems for a large-scale real-estate platform using Clean Architecture</li><li>Implemented Single Sign-On for secure, centralized authentication across system modules</li><li>Developed plot merging, data filtering and cyclic security workflows, plus modular services for plot management, ownership tracking and reporting</li><li>Processed large volumes of legacy data for the Design Wing and built SQL-based services; deploy to virtual machines</li><li>Integrated third-party tools (e.g. Print Save Track) with international teams</li></ul><p class="tech">.NET 9 · SSO · SQL Server · Clean Architecture · VMs</p></div>
+<div class="job"><div class="job-head"><strong>Software Developer</strong><time>Apr 2023 — Nov 2024</time></div><p class="where">Dukanlay Solutions · Lahore</p><ul><li>Led development and maintenance of ASP.NET Core web applications with Entity Framework and SQL Server</li><li>Built responsive Razor Pages and React front ends that improved platform usability</li><li>Designed data-access layers with the Repository and Unit of Work patterns and dependency injection</li><li>Delivered with a cross-functional Agile team, from requirements to release; contributed to BankMind AI</li></ul><p class="tech">ASP.NET Core · Entity Framework · SQL Server · Razor Pages · React · Agile</p></div>
+<div class="job"><div class="job-head"><strong>Freelance Developer</strong><time>Mid-2022 — Mar 2023</time></div><p class="where">Online projects · Remote</p><ul><li>Built web applications and small software solutions with .NET, C#, Angular and SQL for remote clients</li></ul><p class="tech">.NET · C# · Angular · SQL</p></div>
 
 <h2>Selected projects</h2>
 <ul class="projects">
