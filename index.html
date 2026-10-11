@@ -28,7 +28,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header" data-header="">
 <div class="wrap nav-shell">
-<a aria-label="Umar Jamal home" class="wordmark" href="#top">
+<a class="wordmark" href="#top">
 <strong>Umar Jamal</strong>
 <span>Software Engineer · Epicor ERP &amp; .NET</span>
 </a>
@@ -61,7 +61,7 @@
 <button class="secondary-button" data-book-service="Free 15-minute fit check" type="button">Book a free 15-min call <span aria-hidden="true">↗</span></button>
 <a class="quiet-link" download="" href="assets/Umar-Jamal-CV.pdf">Download CV ↓</a>
 </div>
-<div aria-label="Professional summary" class="hero-facts">
+<div aria-label="Professional summary" class="hero-facts" role="group">
 <div><span>Experience</span><strong>4+ years · enterprise software &amp; Epicor ERP</strong></div>
 <div><span>Core focus</span><strong>ERP · backend · integrations · CRM · data</strong></div>
 <div><span>Primary stack</span><strong>Epicor ERP · C# · .NET · SQL Server</strong></div>
@@ -99,7 +99,7 @@
 </div>
 <div class="erp-heading-copy">
 <p>I treat Epicor as the operational core of a wider enterprise platform: CRM and customer activity enter on one side; secure .NET services, APIs, identity and external applications connect on the other; SQL and reporting sit underneath the flow.</p>
-<div aria-label="Epicor ERP capabilities" class="erp-tags">
+<div role="group" aria-label="Epicor ERP capabilities" class="erp-tags">
 <span>BPMs</span><span>BAQs</span><span>Business logic</span><span>REST APIs</span><span>Workflow automation</span><span>SQL Server</span><span>CRM integration</span><span>Production support</span>
 </div>
 </div>
@@ -122,14 +122,14 @@
 <button aria-pressed="false" data-architecture-mode="security" type="button">Security</button>
 </div>
 </div>
-<div aria-label="Enterprise system flow" class="architecture-path">
+<div role="group" aria-label="Enterprise system flow" class="architecture-path">
 <span data-path-step="business">Customer / CRM</span><i aria-hidden="true">→</i>
 <span data-path-step="core">Epicor ERP</span><i aria-hidden="true">→</i>
 <span data-path-step="services">.NET / APIs</span><i aria-hidden="true">→</i>
 <span data-path-step="access">Identity / Apps</span><i aria-hidden="true">→</i>
 <span data-path-step="data">SQL / Reporting</span>
 </div>
-<div aria-label="Interactive system map" class="mobile-system-explorer" data-mobile-system-explorer="">
+<div role="group" aria-label="Interactive system map" class="mobile-system-explorer" data-mobile-system-explorer="">
 <div class="mobile-explorer-intro">
 <div><span data-mobile-mode-label="">Business flow</span><strong data-mobile-mode-title="">From customer demand to ERP operations</strong></div>
 <p data-mobile-mode-copy="">Tap a layer once to see what it owns, why it exists and how it connects to the next system.</p>
@@ -170,8 +170,8 @@
 </div>
 <div aria-hidden="true" class="horizontal-connector connector-left"><i></i><b>validated business flow</b></div>
 <button class="erp-core-node is-active" data-arch-key="erp" data-copy="Epicor is the operational core: business rules, transactional workflows and enterprise data across sales, inventory, procurement, manufacturing, finance and operations." data-title="Epicor ERP" type="button">
-<div class="core-head"><span>03 / Core system</span><strong>Epicor ERP</strong><small>Operational source of truth</small></div>
-<div class="core-modules"><span>Sales</span><span>Inventory</span><span>Procurement</span><span>Manufacturing</span><span>Finance</span><span>Operations</span></div>
+<span class="core-head"><span>03 / Core system</span><strong>Epicor ERP</strong><small>Operational source of truth</small></span>
+<span class="core-modules"><span>Sales</span><span>Inventory</span><span>Procurement</span><span>Manufacturing</span><span>Finance</span><span>Operations</span></span>
 </button>
 <div aria-hidden="true" class="horizontal-connector connector-right"><i></i><b>secure integration boundary</b></div>
 <div class="network-stack network-services">
@@ -186,7 +186,7 @@
 </div>
 <div class="screen-statusbar">
 <span class="status-ready"><i></i> Production-minded architecture</span>
-<div aria-label="Architecture color legend" class="map-legend">
+<div role="group" aria-label="Architecture color legend" class="map-legend">
 <span class="legend-business">Business</span>
 <span class="legend-core">ERP core</span>
 <span class="legend-service">Services</span>
@@ -207,11 +207,11 @@
 <div><dt>Method</dt><dd data-arch-method="">ERP-owned rules</dd></div>
 <div><dt>Outcome</dt><dd data-arch-outcome="">Stable system of record</dd></div>
 </dl>
-<div aria-label="Architecture reference links" class="architecture-resources">
+<div role="group" aria-label="Architecture reference links" class="architecture-resources">
 <span>Useful references</span>
 <div>
-<a aria-haspopup="dialog" aria-label="Preview Xero Accounting API inside portfolio; open in new tab is also available" data-preview-description="Preview the public Xero Accounts API explorer inside the portfolio. Use Open new tab for the full developer experience." data-preview-kicker="Technical reference" data-preview-mode="overview" data-preview-title="Xero Accounting API" data-site-preview="" href="https://api-explorer.xero.com/accounting/accounts/getaccounts" rel="noopener noreferrer" target="_blank"><strong>Xero Accounting API</strong><small>Open Accounts explorer ↗</small></a>
-<a aria-haspopup="dialog" aria-label="Preview Scalar ASP.NET API Reference inside portfolio; open in new tab is also available" data-preview-description="Preview the public Scalar ASP.NET Core integration reference without leaving the portfolio." data-preview-kicker="Technical reference" data-preview-mode="overview" data-preview-title="Scalar ASP.NET API Reference" data-site-preview="" href="https://scalar.com/products/api-references/integrations/aspnetcore/integration" rel="noopener noreferrer" target="_blank"><strong>Scalar API Docs</strong><small>Open ASP.NET integration ↗</small></a>
+<a aria-haspopup="dialog" data-preview-description="Preview the public Xero Accounts API explorer inside the portfolio. Use Open new tab for the full developer experience." data-preview-kicker="Technical reference" data-preview-mode="overview" data-preview-title="Xero Accounting API" data-site-preview="" href="https://api-explorer.xero.com/accounting/accounts/getaccounts" rel="noopener noreferrer" target="_blank"><strong>Xero Accounting API</strong><small>Open Accounts explorer ↗</small><span class="sr-only"> (opens a preview of Xero Accounting API here; it can also open in a new tab)</span></a>
+<a aria-haspopup="dialog" data-preview-description="Preview the public Scalar ASP.NET Core integration reference without leaving the portfolio." data-preview-kicker="Technical reference" data-preview-mode="overview" data-preview-title="Scalar ASP.NET API Reference" data-site-preview="" href="https://scalar.com/products/api-references/integrations/aspnetcore/integration" rel="noopener noreferrer" target="_blank"><strong>Scalar API Docs</strong><small>Open ASP.NET integration ↗</small><span class="sr-only"> (opens a preview of Scalar ASP.NET API Reference here; it can also open in a new tab)</span></a>
 </div>
 </div>
 <button class="brief-cta" data-book-service="Free 15-minute fit check" type="button">Discuss your architecture <span>↗</span></button>
@@ -230,7 +230,7 @@
 </div>
 <article class="feature-case feature-case-live">
 <div class="feature-media">
-<div aria-labelledby="centaiva-demo-title" class="product-window">
+<div role="group" aria-labelledby="centaiva-demo-title" class="product-window">
 <div class="product-window-bar">
 <div aria-hidden="true" class="product-window-dots"><i></i><i></i><i></i></div>
 <span>centaiva.platform / control-plane</span>
@@ -254,7 +254,7 @@
 </aside>
 <div aria-labelledby="centaiva-tab-platform" class="product-main" id="centaiva-panel" role="tabpanel" tabindex="0">
 <div class="product-main-head">
-<div><span data-product-kicker="">Architecture / overview</span><h4 data-product-title="">Platform control plane</h4></div>
+<div><span data-product-kicker="">Architecture / overview</span><h3 data-product-title="">Platform control plane</h3></div>
 <em><i></i><span data-product-status="">Live system model</span></em>
 </div>
 <div class="product-context"><span>Click a layer to explore</span><strong data-product-summary="">One control plane keeps identity, tenancy, access, products, integrations and data boundaries understandable.</strong></div>
@@ -263,13 +263,13 @@
 <button aria-pressed="false" data-product-kpi="1" type="button"><span>Tenancy</span><strong>Scoped hierarchy</strong></button>
 <button aria-pressed="false" data-product-kpi="2" type="button"><span>Access</span><strong>Roles + permissions</strong></button>
 </div>
-<div aria-label="Selected platform flow" class="product-flow" data-product-flow="">
+<div role="group" aria-label="Selected platform flow" class="product-flow" data-product-flow="">
 <div><span>Platform</span><strong>Control</strong></div><i>→</i><div><span>Identity</span><strong>SSO</strong></div><i>→</i><div><span>Tenant</span><strong>Context</strong></div><i>→</i><div><span>Apps</span><strong>Access</strong></div>
 </div>
 <div class="product-lower">
-<button aria-pressed="false" data-product-lower="0" type="button"><span>Commercial layer</span><p>Products · plans · subscriptions · entitlements</p></button>
-<button aria-pressed="false" data-product-lower="1" type="button"><span>Integration layer</span><p>OAuth clients · API keys · webhooks · external services</p></button>
-<button aria-pressed="false" data-product-lower="2" type="button"><span>Data &amp; deployment</span><p>Shared/dedicated data · routing · audit · backups</p></button>
+<button aria-pressed="false" data-product-lower="0" type="button"><span>Commercial layer</span><span class="lower-copy">Products · plans · subscriptions · entitlements</span></button>
+<button aria-pressed="false" data-product-lower="1" type="button"><span>Integration layer</span><span class="lower-copy">OAuth clients · API keys · webhooks · external services</span></button>
+<button aria-pressed="false" data-product-lower="2" type="button"><span>Data &amp; deployment</span><span class="lower-copy">Shared/dedicated data · routing · audit · backups</span></button>
 </div>
 <div aria-live="polite" class="product-selection"><span>Selected detail</span><strong data-product-selection="">Choose any architecture card to inspect it without leaving the page.</strong></div>
 </div>
@@ -297,25 +297,25 @@
 <div class="work-index">02</div>
 <div class="work-title"><p>Healthcare recruitment CRM</p><h3>MedPure Recruitment CRM</h3></div>
 <div class="work-description"><p>CRM for a UK healthcare recruitment business: candidate availability, bookings, CV preparation, payroll and reporting, with real-time updates, scheduled shift reminders and two-factor sign-in.</p><span>Angular 18 · ASP.NET Core (.NET 10) · EF Core · Dapper · SQL Server · SignalR · JWT + 2FA</span></div>
-<a aria-haspopup="dialog" aria-label="Preview MedPure Recruitment CRM inside portfolio; open in new tab is also available" data-preview-description="The MedPure CRM sign-in page. The CRM itself is private to MedPure staff; open it in a new tab to see the live login." data-preview-kicker="Live product" data-preview-mode="overview" data-preview-title="MedPure Recruitment CRM" data-site-preview="" href="https://dashboard.medpure.co.uk/" rel="noopener noreferrer" target="_blank" class="work-link">Live ↗</a>
+<a aria-haspopup="dialog" data-preview-description="The MedPure CRM sign-in page. The CRM itself is private to MedPure staff; open it in a new tab to see the live login." data-preview-kicker="Live product" data-preview-mode="overview" data-preview-title="MedPure Recruitment CRM" data-site-preview="" href="https://dashboard.medpure.co.uk/" rel="noopener noreferrer" target="_blank" class="work-link">Live ↗<span class="sr-only"> (opens a preview of MedPure Recruitment CRM here; it can also open in a new tab)</span></a>
 </article>
 <article class="work-row">
 <div class="work-index">03</div>
 <div class="work-title"><p>UK-facing accounting integration</p><h3>Xero Accounting API</h3></div>
 <div class="work-description"><p>Xero accounting integration through an authenticated .NET service boundary, including Accounts / chart-of-accounts retrieval for finance-facing business workflows.</p><span>Xero Accounting API · OAuth 2.0 · C#/.NET · GET Accounts · integration services</span></div>
-<a aria-haspopup="dialog" aria-label="Preview Xero Accounting API inside portfolio; open in new tab is also available" data-preview-description="Preview the public Xero Accounts API explorer inside the portfolio. Use Open new tab for the full developer experience." data-preview-kicker="Technical reference" data-preview-mode="overview" data-preview-title="Xero Accounting API" data-site-preview="" href="https://api-explorer.xero.com/accounting/accounts/getaccounts" rel="noopener noreferrer" target="_blank" class="work-link">API ↗</a>
+<a aria-haspopup="dialog" data-preview-description="Preview the public Xero Accounts API explorer inside the portfolio. Use Open new tab for the full developer experience." data-preview-kicker="Technical reference" data-preview-mode="overview" data-preview-title="Xero Accounting API" data-site-preview="" href="https://api-explorer.xero.com/accounting/accounts/getaccounts" rel="noopener noreferrer" target="_blank" class="work-link">API ↗<span class="sr-only"> (opens a preview of Xero Accounting API here; it can also open in a new tab)</span></a>
 </article>
 <article class="work-row">
 <div class="work-index">04</div>
 <div class="work-title"><p>AI-enabled banking</p><h3>BankMind AI</h3></div>
 <div class="work-description"><p>Contributed to an AI-driven banking product, including backend performance work for large datasets and a React + ASP.NET Core application experience.</p><span>ASP.NET Core · React · AI product · large datasets</span></div>
-<a aria-haspopup="dialog" aria-label="Preview BankMind AI inside portfolio; open in new tab is also available" data-preview-description="Preview the public BankMind AI website inside the portfolio. You can also open the live site in a new tab at any time." data-preview-kicker="Live product website" data-preview-mode="overview" data-preview-title="BankMind AI" data-site-preview="" href="https://www.bankmind.ai/" rel="noopener noreferrer" target="_blank" class="work-link work-preview-link">Preview</a>
+<a aria-haspopup="dialog" data-preview-description="Preview the public BankMind AI website inside the portfolio. You can also open the live site in a new tab at any time." data-preview-kicker="Live product website" data-preview-mode="overview" data-preview-title="BankMind AI" data-site-preview="" href="https://www.bankmind.ai/" rel="noopener noreferrer" target="_blank" class="work-link work-preview-link">Preview<span class="sr-only"> (opens a preview of BankMind AI here; it can also open in a new tab)</span></a>
 </article>
 <article class="work-row">
 <div class="work-index">05</div>
 <div class="work-title"><p>Enterprise real estate</p><h3>Bahria Town Design Wing</h3></div>
 <div class="work-description"><p>.NET 9 backend work across SSO, plot workflows, legacy data, SQL services, modular architecture, ownership/reporting and VM deployment.</p><span>.NET 9 · SSO · SQL Server · Clean Architecture · VM</span></div>
-<a aria-haspopup="dialog" aria-label="Preview Bahria Town Design Wing inside portfolio; open in new tab is also available" data-preview-description="Preview the public Bahria Town website as context for the enterprise real-estate systems work described in this portfolio." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="Bahria Town Design Wing" data-site-preview="" href="https://bahriatown.com/bahria-town-lahore/" rel="noopener noreferrer" target="_blank" class="work-link">Org ↗</a>
+<a aria-haspopup="dialog" data-preview-description="Preview the public Bahria Town website as context for the enterprise real-estate systems work described in this portfolio." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="Bahria Town Design Wing" data-site-preview="" href="https://bahriatown.com/bahria-town-lahore/" rel="noopener noreferrer" target="_blank" class="work-link">Org ↗<span class="sr-only"> (opens a preview of Bahria Town Design Wing here; it can also open in a new tab)</span></a>
 </article>
 <article class="work-row">
 <div class="work-index">06</div>
@@ -412,9 +412,9 @@
 <div class="track-card-top"><span>01 / Finance integration</span><em>UK-facing</em></div>
 <h3>Xero Accounting API</h3>
 <p>Accounting integration through OAuth 2.0 and a controlled .NET service boundary. The current portfolio example focuses on <strong>GET Accounts</strong> / chart-of-accounts retrieval rather than claiming a generic “Xero expert” badge.</p>
-<div aria-label="Xero integration flow" class="track-flow"><span>Xero</span><i>→</i><span>.NET service</span><i>→</i><span>business workflow</span></div>
+<div role="group" aria-label="Xero integration flow" class="track-flow"><span>Xero</span><i>→</i><span>.NET service</span><i>→</i><span>business workflow</span></div>
 <div class="track-tags"><span>OAuth 2.0</span><span>GET /Accounts</span><span>C# / .NET</span><span>Finance data</span></div>
-<a aria-haspopup="dialog" aria-label="Preview Xero Accounting API inside portfolio; open in new tab is also available" class="track-link external-link" data-preview-description="Preview the public Xero Accounts API explorer inside the portfolio. Use Open new tab for the full developer experience." data-preview-kicker="Technical reference" data-preview-mode="overview" data-preview-title="Xero Accounting API" data-site-preview="" href="https://api-explorer.xero.com/accounting/accounts/getaccounts" rel="noopener noreferrer" target="_blank">Open Xero API explorer ↗</a>
+<a aria-haspopup="dialog" class="track-link external-link" data-preview-description="Preview the public Xero Accounts API explorer inside the portfolio. Use Open new tab for the full developer experience." data-preview-kicker="Technical reference" data-preview-mode="overview" data-preview-title="Xero Accounting API" data-site-preview="" href="https://api-explorer.xero.com/accounting/accounts/getaccounts" rel="noopener noreferrer" target="_blank">Open Xero API explorer ↗<span class="sr-only"> (opens a preview of Xero Accounting API here; it can also open in a new tab)</span></a>
 </article>
 <article class="track-card">
 <div class="track-card-top"><span>02 / .NET platform</span><em>Current track</em></div>
@@ -425,7 +425,7 @@
 <div><span>.NET 11</span><strong>Preview 7 · evaluation only</strong></div>
 </div>
 <div class="track-tags"><span>ASP.NET Core</span><span>OpenAPI</span><span>Scalar.AspNetCore</span><span>EF Core</span></div>
-<a aria-haspopup="dialog" aria-label="Preview Scalar ASP.NET API Reference inside portfolio; open in new tab is also available" class="track-link external-link" data-preview-description="Preview the public Scalar ASP.NET Core integration reference without leaving the portfolio." data-preview-kicker="Technical reference" data-preview-mode="overview" data-preview-title="Scalar ASP.NET API Reference" data-site-preview="" href="https://scalar.com/products/api-references/integrations/aspnetcore/integration" rel="noopener noreferrer" target="_blank">Scalar API reference ↗</a>
+<a aria-haspopup="dialog" class="track-link external-link" data-preview-description="Preview the public Scalar ASP.NET Core integration reference without leaving the portfolio." data-preview-kicker="Technical reference" data-preview-mode="overview" data-preview-title="Scalar ASP.NET API Reference" data-site-preview="" href="https://scalar.com/products/api-references/integrations/aspnetcore/integration" rel="noopener noreferrer" target="_blank">Scalar API reference ↗<span class="sr-only"> (opens a preview of Scalar ASP.NET API Reference here; it can also open in a new tab)</span></a>
 </article>
 <article class="track-card">
 <div class="track-card-top"><span>03 / Data operations</span><em>Production support</em></div>
@@ -452,12 +452,12 @@
 <h2 id="client-work-title">ERP, CRM, finance, commerce, manufacturing and operations.</h2>
 </div>
 <div class="client-list" data-link-list="">
-<a aria-haspopup="dialog" aria-label="Preview Galvin Engineering inside portfolio; open in new tab is also available" data-preview-description="Preview the public Galvin Engineering website as context for the backend optimization and product UI work." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="Galvin Engineering" data-site-preview="" href="https://www.galvinengineering.com.au/" rel="noopener noreferrer" target="_blank"><span>Galvin · Australia</span><strong>Backend optimization &amp; product UI</strong><span aria-hidden="true" class="client-tail"></span></a>
-<a aria-haspopup="dialog" aria-label="Preview Caterlink inside portfolio; open in new tab is also available" data-preview-description="Preview the public Caterlink website as context for the WooCommerce and order-automation work." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="Caterlink" data-site-preview="" href="https://www.caterlink.com.au/" rel="noopener noreferrer" target="_blank"><span>Caterlink · Australia</span><strong>WooCommerce &amp; order automation</strong><span aria-hidden="true" class="client-tail"></span></a>
-<a aria-haspopup="dialog" aria-label="Preview C &amp; W Services inside portfolio; open in new tab is also available" data-preview-description="Preview the public C &amp; W Services website as context for the internal workflow application work." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="C &amp; W Services" data-site-preview="" href="https://cwservices.com/" rel="noopener noreferrer" target="_blank"><span>C &amp; W Services</span><strong>Internal workflow applications</strong><span aria-hidden="true" class="client-tail"></span></a>
-<a aria-haspopup="dialog" aria-label="Preview United Fasteners inside portfolio; open in new tab is also available" data-preview-description="Preview the public United Fasteners website as context for the e-commerce integration and product-automation work." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="United Fasteners" data-site-preview="" href="https://www.unitedfasteners.com.au/" rel="noopener noreferrer" target="_blank"><span>United Fasteners · Australia</span><strong>E-commerce integration &amp; product automation</strong><span aria-hidden="true" class="client-tail"></span></a>
-<a aria-haspopup="dialog" aria-label="Preview MIT Semiconductor inside portfolio; open in new tab is also available" data-preview-description="Preview the public MIT Semiconductor website as context for the ERP customization and systems-integration work." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="MIT Semiconductor" data-site-preview="" href="https://www.mit.com.sg/" rel="noopener noreferrer" target="_blank"><span>MIT Semiconductor · Singapore</span><strong>ERP customization &amp; systems integration</strong><span aria-hidden="true" class="client-tail"></span></a>
-<a aria-haspopup="dialog" aria-label="Preview Orbital UAV inside portfolio; open in new tab is also available" data-preview-description="Preview the public Orbital UAV website as context for the backend and materials-planning systems work." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="Orbital UAV" data-site-preview="" href="https://www.orbitaluav.com/" rel="noopener noreferrer" target="_blank"><span>Orbital UAV · Australia</span><strong>Backend &amp; materials-planning systems</strong><span aria-hidden="true" class="client-tail"></span></a>
+<a aria-haspopup="dialog" data-preview-description="Preview the public Galvin Engineering website as context for the backend optimization and product UI work." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="Galvin Engineering" data-site-preview="" href="https://www.galvinengineering.com.au/" rel="noopener noreferrer" target="_blank"><span>Galvin · Australia</span><strong>Backend optimization &amp; product UI</strong><span aria-hidden="true" class="client-tail"></span><span class="sr-only"> (opens a preview of Galvin Engineering here; it can also open in a new tab)</span></a>
+<a aria-haspopup="dialog" data-preview-description="Preview the public Caterlink website as context for the WooCommerce and order-automation work." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="Caterlink" data-site-preview="" href="https://www.caterlink.com.au/" rel="noopener noreferrer" target="_blank"><span>Caterlink · Australia</span><strong>WooCommerce &amp; order automation</strong><span aria-hidden="true" class="client-tail"></span><span class="sr-only"> (opens a preview of Caterlink here; it can also open in a new tab)</span></a>
+<a aria-haspopup="dialog" data-preview-description="Preview the public C &amp; W Services website as context for the internal workflow application work." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="C &amp; W Services" data-site-preview="" href="https://cwservices.com/" rel="noopener noreferrer" target="_blank"><span>C &amp; W Services</span><strong>Internal workflow applications</strong><span aria-hidden="true" class="client-tail"></span><span class="sr-only"> (opens a preview of C &amp; W Services here; it can also open in a new tab)</span></a>
+<a aria-haspopup="dialog" data-preview-description="Preview the public United Fasteners website as context for the e-commerce integration and product-automation work." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="United Fasteners" data-site-preview="" href="https://www.unitedfasteners.com.au/" rel="noopener noreferrer" target="_blank"><span>United Fasteners · Australia</span><strong>E-commerce integration &amp; product automation</strong><span aria-hidden="true" class="client-tail"></span><span class="sr-only"> (opens a preview of United Fasteners here; it can also open in a new tab)</span></a>
+<a aria-haspopup="dialog" data-preview-description="Preview the public MIT Semiconductor website as context for the ERP customization and systems-integration work." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="MIT Semiconductor" data-site-preview="" href="https://www.mit.com.sg/" rel="noopener noreferrer" target="_blank"><span>MIT Semiconductor · Singapore</span><strong>ERP customization &amp; systems integration</strong><span aria-hidden="true" class="client-tail"></span><span class="sr-only"> (opens a preview of MIT Semiconductor here; it can also open in a new tab)</span></a>
+<a aria-haspopup="dialog" data-preview-description="Preview the public Orbital UAV website as context for the backend and materials-planning systems work." data-preview-kicker="Organisation website" data-preview-mode="overview" data-preview-title="Orbital UAV" data-site-preview="" href="https://www.orbitaluav.com/" rel="noopener noreferrer" target="_blank"><span>Orbital UAV · Australia</span><strong>Backend &amp; materials-planning systems</strong><span aria-hidden="true" class="client-tail"></span><span class="sr-only"> (opens a preview of Orbital UAV here; it can also open in a new tab)</span></a>
 <div class="client-static"><span>CRM Project</span><strong>Lead management, communication &amp; analytics dashboards</strong><em class="client-status">Private case</em></div>
 <a class="client-internal-link" href="#experience"><span>Epicor ERP Delivery</span><strong>Backend, integrations, commerce &amp; automation</strong><em class="client-action-link">Experience <b aria-hidden="true">→</b></em></a>
 </div>
@@ -507,12 +507,12 @@
 <a href="https://wa.me/923006917248?text=Hi%20Umar%2C%20I%27d%20like%20to%20schedule%20a%20free%2015-minute%20discovery%20call." rel="noopener noreferrer" target="_blank">Or connect on WhatsApp →</a>
 </div>
 </div>
-<div aria-label="How a technical advisory engagement works" class="wrap engagement-flow">
+<div role="group" aria-label="How a technical advisory engagement works" class="wrap engagement-flow">
 <article><span>01</span><div><strong>Choose the conversation</strong><p>Start free for fit and scope, or choose a focused paid technical session.</p></div></article>
 <article><span>02</span><div><strong>Pick a time</strong><p>Use the live scheduler when connected, or send a booking request from the portfolio.</p></div></article>
 <article><span>03</span><div><strong>Leave with a next move</strong><p>We finish with a clear recommendation, risks and practical implementation steps.</p></div></article>
 </div>
-<div aria-label="Technical advisory options" class="wrap advisory-services">
+<div role="group" aria-label="Technical advisory options" class="wrap advisory-services">
 <article class="service-card">
 <div class="service-number">01</div>
 <span class="service-type">Technical direction</span>
@@ -639,7 +639,7 @@
 <div class="booking-connect"><span>Prefer direct contact?</span><a href="https://wa.me/923006917248?text=Hi%20Umar%2C%20I%27d%20like%20to%20schedule%20a%20call." rel="noopener noreferrer" target="_blank">WhatsApp ↗</a><a href="mailto:umarjamal201099@gmail.com?subject=Schedule%20a%20call">Email ↗</a></div>
 </aside>
 <form action="https://formspree.io/f/mzzbdgjb" class="booking-form" id="booking-form" method="POST">
-<div aria-label="Choose a session" class="booking-quick-start">
+<div role="group" aria-label="Choose a session" class="booking-quick-start">
 <div class="booking-quick-head"><span>Choose a session</span><strong>One click, then add your context.</strong></div>
 <div aria-label="Session options" class="booking-quick-grid" role="group">
 <button class="is-active" data-booking-choice="Free 15-minute fit check" type="button"><span>Discovery</span><strong>15 min</strong><em>Free</em></button>

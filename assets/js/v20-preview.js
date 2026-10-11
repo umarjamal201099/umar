@@ -25,7 +25,8 @@
     link.setAttribute('rel', [...rel].join(' '));
     link.classList.add('external-new-tab');
 
-    if (!link.querySelector('[data-new-tab-hint]')) {
+    // Preview links open a dialog first and carry their own screen-reader note.
+    if (!link.hasAttribute('data-site-preview') && !link.querySelector('[data-new-tab-hint]')) {
       const hint = document.createElement('span');
       hint.className = 'sr-only';
       hint.dataset.newTabHint = '';

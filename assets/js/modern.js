@@ -374,7 +374,7 @@
           const item = data.lower[index];
           if (!item) return;
           const label = card.querySelector('span');
-          const value = card.querySelector('p');
+          const value = card.querySelector('.lower-copy');
           if (label) label.textContent = item[0];
           if (value) value.textContent = item[1];
         });
